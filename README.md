@@ -1,16 +1,17 @@
-# LolCollector
+# LoLCollector
+
 A website to collection about League Of Legends MOBA game.
 
-## Install
+## How to install?
 
 `npm install -g webpack webpack-dev-server && npm install`
 
-## Build
+## How to build?
 
 ### Production
 
-`webpack -p && PORT=80 node server.js`
+`webpack -p`
 
 ### Development
 
-`BUILD_DEV=1 webpack-dev-server --content-base public/ --inline --history-api-fallback`
+`BUILD_DEV=1 webpack-dev-server --content-base public/ --inline`
