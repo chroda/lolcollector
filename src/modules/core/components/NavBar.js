@@ -1,9 +1,9 @@
 import React from 'react';
 
 const NavBar = ({ fixed, inverse, children }) => (
-  <div className={`navbar ${fixed ? `navbar-fixed-${fixed}` : ''} navbar-${inverse ? `inverse` : 'default'}`}>
+  <nav className={`navbar ${fixed ? `navbar-fixed-${fixed}` : ''} navbar-${inverse ? `inverse` : 'default'}`}>
     {children}
-  </div>
+  </nav>
 );
 
 NavBar.propTypes = {

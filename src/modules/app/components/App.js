@@ -17,7 +17,15 @@ const App = ({ children }) => (
     <Container fixed='both'>
       {children}
     </Container>
-    <NavBar fixed='bottom' inverse />
+    <NavBar fixed='bottom' inverse>
+      <div className="container-fluid">
+        <div className="collapse navbar-collapse">
+          <ul className="nav navbar-nav navbar-right">
+            <li><a href="http://chroda.com.br" target="_blank">Made with love by chroda</a></li>
+          </ul>
+        </div>
+      </div>
+    </NavBar>
   </div>
 );
 
