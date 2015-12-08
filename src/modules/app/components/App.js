@@ -12,8 +12,6 @@ const App = ({ children }) => (
         </div>
       </div>
       <ul className="nav navbar-nav">
-        <li><Link activeClassName="active" to="/clientes">Clientes</Link></li>
-        <li><Link activeClassName="active" to="/produtos">Produtos</Link></li>
       </ul>
     </NavBar>
     <Container fixed='both'>
