@@ -1,14 +1,15 @@
 import App from './modules/app/components/App.js';
-import Projects from './modules/projects/containers/Projects.js';
+import Champions from './modules/champions/containers/Champions.js';
+// import Projects from './modules/projects/containers/Projects.js';
 
 const routes = [
   {
     path: '/',
     component: App,
-    indexRoute: { component: Projects },
-    childRoutes: [
-      { path: 'projects', component: Projects }
-    ]
+    indexRoute: { component: Champions },
+    // childRoutes: [
+    //   { path: 'projects', component: Projects }
+    // ]
   }
 ];
 

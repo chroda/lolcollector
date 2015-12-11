@@ -14,7 +14,7 @@ const App = ({ children }) => (
       <ul className="nav navbar-nav">
       </ul>
     </NavBar>
-    <Container fixed='both'>
+    <Container>
       {children}
     </Container>
     <NavBar fixed='bottom' inverse>
