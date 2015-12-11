@@ -7,7 +7,6 @@ import ChampionPanel from '../components/ChampionPanel.js';
 
 class Champions extends React.Component {
   componentDidMount() {
-    console.log(loadChampions());
     this.props.dispatch(loadChampions());
   }
   render() {
@@ -22,7 +21,6 @@ class Champions extends React.Component {
     if (errorMessage) {
       return <Alert type="danger">{errorMessage}</Alert>;
     }
-    //console.log(this.props);
     return <ChampionPanel champions={champions} />;
   }
 }

@@ -12,6 +12,7 @@ const App = ({ children }) => (
         </div>
       </div>
       <ul className="nav navbar-nav">
+        <li><a href="./projects" target="_self">projects</a></li>
       </ul>
     </NavBar>
     <Container>

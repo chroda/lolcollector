@@ -22,8 +22,6 @@ export const callAPIRiot = (path, params, region, version) => {
   if (!path) {
     throw new Error('Invalid path');
   }
-  //https://br.api.pvp.net/api/lol/br/v1.2/champion?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f
-  //https://br.api.pvp.net/api/lol/br/v2.4/champion?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f
   const api_key = '2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f';
   if(!region){
     region='br';
@@ -51,6 +49,7 @@ export const callAPIRiot = (path, params, region, version) => {
       if (error) {
         return reject(error.response.body);
       }
+      return resolve(response.body[Object.keys(response.body, 0)]);
       return resolve(response.body);
     });
   });
