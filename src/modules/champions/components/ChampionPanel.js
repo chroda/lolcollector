@@ -33,8 +33,7 @@ const ChampionPanel = ({ champions }) => (
             botEnabled={botEnabled}
             freeToPlay={freeToPlay}
             botMmEnabled={botMmEnabled}
-            rankedPlayEnabled={rankedPlayEnabled}
-            />
+            rankedPlayEnabled={rankedPlayEnabled} />
         )}
         </tbody>
       </table>
