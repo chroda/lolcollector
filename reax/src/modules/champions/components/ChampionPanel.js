@@ -19,21 +19,10 @@ const ChampionPanel = ({ champions }) => (
           </tr>
         </thead>
         <tbody>
-          {champions.map(({
-            id,
-            active,
-            botEnabled,
-            freeToPlay,
-            botMmEnabled,
-            rankedPlayEnabled
-          }) => <Champion
-            key={id}
-            id={id}
-            active={active}
-            botEnabled={botEnabled}
-            freeToPlay={freeToPlay}
-            botMmEnabled={botMmEnabled}
-            rankedPlayEnabled={rankedPlayEnabled} />
+          {champions.map(champion,index =>
+            <Champion
+            {...champion}
+            key={index} {...this.props} />
         )}
         </tbody>
       </table>
