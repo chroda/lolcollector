@@ -10,7 +10,6 @@ const ref = new Firebase('https://lolcollector.firebaseio.com/');
 
 @autobind
 class Login extends React.Component {
-
   constructor() {
     super();
 
@@ -19,22 +18,20 @@ class Login extends React.Component {
     }
   }
 
+  componentWillMount() {
+    var token = localStorage.getItem('lolcollector_usersession');
+
+  }
+
   authenticate(provider) {
-    console.log("Trying to auth with " + provider);
     ref.authWithOAuthPopup(provider, this.authHandler);
   }
 
-  componentWillMount() {
-    console.log("Checking to see if we can log them in");
-    var token = localStorage.getItem('token');
-    if(token) {
-      ref.authWithCustomToken(token,this.authHandler);
-    }
-  }
+
 
   logout() {
     ref.unauth();
-    localStorage.removeItem('token');
+    localStorage.removeItem('lolcollector_usersession');
     this.setState({
       uid : null
     });
@@ -47,51 +44,41 @@ class Login extends React.Component {
     }
 
     // save the login token in the browser
-    localStorage.setItem('token',authData.token);
+    localStorage.setItem('lolcollector_usersession',authData.token);
 
-    const storeRef = 'users';
-
-    storeRef.on('value', (snapshot)=> {
-      var data = snapshot.val() || {};
+      var data = {};
 
       // claim it as our own if there is no owner already
-      if(!data.owner) {
-        storeRef.set({
-          owner : authData.uid
+      if(!data.user) {
+        ref.set({
+          users : { user : authData.uid }
         });
       }
 
       // update our state to reflect the current store owner and user
       this.setState({
         uid : authData.uid,
-        owner : data.owner || authData.uid
+        user : data.user || authData.uid
       });
 
-    });
   }
-
-  renderLogin() {
-    return (
-      <nav className="login">
-        <button className="facebook"onClick={this.authenticate.bind(this, 'facebook')} >Log In with Facebook</button>
-        <button className="twitter"onClick={this.authenticate.bind(this, 'twitter')} >Log In with Twitter</button>
-      </nav>
-    )
-  }
-
 
   render() {
-    let logoutButton = <button onClick={this.logout}>Log Out!</button>
+    let loginButton = <button className="btn btn-primary navbar-btn" onClick={this.authenticate.bind(this, 'facebook')} >Log In with Facebook</button>;
+    let logoutButton = <button className="btn btn-danger navbar-btn" onClick={this.logout}>Log Out!</button>;
 
     // first check if they arent logged in
-    if(!this.state.uid) {
+    var token = localStorage.getItem('lolcollector_usersession');
+    if(!token) {
       return (
-        <div>{this.renderLogin()}</div>
+        <div>{loginButton}</div>
       )
     }
 
     // then check if they arent the owner of the current store
-    if(this.state.uid !== this.state.owner) {
+    if(this.state.uid !== this.state.user) {
+      console.log(this.state)
+      console.log(this)
       return (
         <div>
           <p>Sorry, you aren't the owner of this store</p>

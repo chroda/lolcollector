@@ -2,20 +2,23 @@ import React from 'react';
 
 import Login from './Login';
 
-const App = ({ children }) => (
+const Layout = ({ children }) => (
   <div>
+
     <nav className="navbar navbar-default navbar-fixed-top">
-      <div className="navbar-header">
-        <div className="navbar-brand">
-          LoLCollector
+      <div className="container-fluid">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="/">LoLCollector</a>
         </div>
+        <ul className="nav navbar-nav">
+          <li className="active"><a href="/">Link 1</a></li>
+        </ul>
+        <ul className="nav navbar-nav navbar-right">
+          <li>
+            <Login />
+          </li>
+        </ul>
       </div>
-      <ul className="nav navbar-nav">
-        <li><a href="./projects" target="_self">projects</a></li>
-        <li>
-          <Login />
-        </li>
-      </ul>
     </nav>
     <div className="container-fluid">
       {children}
@@ -32,4 +35,4 @@ const App = ({ children }) => (
   </div>
 );
 
-export default App;
+export default Layout;

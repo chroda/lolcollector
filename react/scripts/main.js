@@ -6,8 +6,8 @@ import { createHistory } from 'history';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import NotFound from './components/NotFound';
-import StorePicker from './components/StorePicker';
-import App from './components/App';
+// import StorePicker from './components/StorePicker';
+// import App from './components/App';
 
 /*
   Routes
