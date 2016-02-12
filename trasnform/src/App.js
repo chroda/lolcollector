@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
 
+
+import Firebase from 'firebase';
+const ref = new Firebase('https://lolcollector.firebaseio.com/');
+
+
+
+console.log(ref.child('users/chroda'));
+
 class Counter extends Component {
   constructor(props) {
     super(props);
