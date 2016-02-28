@@ -1,4 +1,4 @@
-# lolcollector
+# LolCollector
 
 A website to collection about League Of Legends MOBA game.
 
@@ -6,7 +6,7 @@ A website to collection about League Of Legends MOBA game.
 
 - [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
 
-## GOALS
+## Goals
 
 - Web Site;
 - Android App;
