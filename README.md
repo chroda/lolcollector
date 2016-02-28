@@ -11,7 +11,8 @@ A website to collection about League Of Legends MOBA game.
 - Web Site;
 - Android App;
 - iOS App;
-- 
+
+
 ## Technologies
 
 - React
