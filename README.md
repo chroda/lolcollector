@@ -6,12 +6,11 @@ A website to collection about League Of Legends MOBA game.
 
 - [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
 
-## Goals
+## Goals Platform
 
 - Web Site;
 - Android App;
 - iOS App;
-
 
 ## Technologies
 
