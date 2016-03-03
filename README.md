@@ -6,6 +6,10 @@ A website to collection about League Of Legends MOBA game.
 
 - [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
 
+## Goals Production
+
+- Collected Champions
+
 ## Goals Platform
 
 - Web Site;
