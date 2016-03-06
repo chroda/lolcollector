@@ -8,9 +8,9 @@ A website to collection about League Of Legends MOBA game.
 
 ## Goals Production
 
-- Collected Champions
-- Collected Skins Champions
-- Collected Skins Wards
+- Collected Champions;
+- Collected Skins Champions;
+- Collected Skins Wards;
 
 ## Goals Platform
 
