@@ -20,7 +20,7 @@ A website to collection about League Of Legends MOBA game.
 
 ## Technologies
 
-- React
-- React-Native
-- Redux
-- Firebase
+- React;
+- React-Native;
+- Redux;
+- Firebase;
