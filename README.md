@@ -18,7 +18,7 @@ A website to collection about League Of Legends MOBA game.
 - Android App;
 - iOS App;
 
-## Technologies
+## Technologies:
 
 - React;
 - React-Native;
