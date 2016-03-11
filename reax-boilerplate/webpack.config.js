@@ -1,9 +1,9 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './client',
   output: {
-    path: './public',
+    path: './server/public',
     filename: 'index.js'
   },
   module: {
@@ -14,14 +14,15 @@ module.exports = {
         loader: 'babel',
         query: {
           presets: ['es2015', 'react'],
-          plugins: ['transform-object-assign']
+          plugins: ['transform-object-rest-spread']
         }
       }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
-      __DEV__: process.env.BUILD_DEV
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.API_ROOT': JSON.stringify(process.env.API_ROOT)
     })
   ]
-};
+}
