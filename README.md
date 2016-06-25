@@ -32,5 +32,6 @@ A website to collection about League Of Legends MOBA game.
 
 ## Colaborators
 
-- [Pagelkopf5](https://github.com/Pagelkopf5);
+- [chroda](https://github.com/chroda);
 - [Katanako](https://github.com/Katanako);
+- [Pagelkopf5](https://github.com/Pagelkopf5);
