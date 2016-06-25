@@ -29,3 +29,8 @@ A website to collection about League Of Legends MOBA game.
 - CodeIgniter;
 - Lavarel;
 - Firebase;
+
+## Colaborators
+
+- [Pagelkopf5](https://github.com/Pagelkopf5);
+- [Katanako](https://github.com/Katanako);
