@@ -14,7 +14,7 @@
 
 
 
-## Bibliografia
+## Links
 
 - op.gg											- partida ativa / stats de campeoes (aba champions)
 - champion.gg									- ranked stats mundial
@@ -23,7 +23,7 @@
 
 
 
-## layout
+## Layout
 
 - op.gg											- mais "clean" / e icone com a borda / runas (marcas, selos, glifos)
 - teemo.gg										- icones de estatisticas 
