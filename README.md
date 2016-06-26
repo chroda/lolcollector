@@ -1,19 +1,19 @@
 # LolCollector
 
-A website to collection about League Of Legends MOBA game.
+A League Of Legends -MOBA game- collection website.
 
 ## Tutos
 
-- I've be locking a bunch of tutorials, with time I'l will put the list here.
+- I've being looking a bunch of tutorials, with time I will put the list here.
 - [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
 
-## Goals Production
+## Production Goals
 
 - Collected Champions;
 - Collected Skins Champions;
 - Collected Skins Wards;
 
-## Goals Platform
+## Plataform Goals
 
 - Web Site;
 - Android App;
