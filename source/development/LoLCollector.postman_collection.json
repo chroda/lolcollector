@@ -1,0 +1,89 @@
+{
+	"id": "5016d69f-4f18-18f7-9da2-83347ea2ff7f",
+	"name": "LoLCollector",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "da05fee1-8d01-c651-26bb-f340ab0c9cb2",
+			"name": "champion",
+			"description": "",
+			"order": [
+				"03acf091-11fd-45ac-7480-34dbfe67f945",
+				"6e84c488-7b96-e2b2-0c4d-f425ea3069c3",
+				"3cf9c937-dac9-84c4-e838-6c5c8aed267c"
+			],
+			"owner": "237533"
+		}
+	],
+	"timestamp": 1466982765616,
+	"owner": "237533",
+	"remoteLink": "",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "03acf091-11fd-45ac-7480-34dbfe67f945",
+			"headers": "",
+			"url": "https://br.api.pvp.net/api/lol/br/v1.2/champion?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5016d69f-4f18-18f7-9da2-83347ea2ff7f",
+			"data": null,
+			"dataMode": "params",
+			"name": "champion",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1466984248714,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "da05fee1-8d01-c651-26bb-f340ab0c9cb2"
+		},
+		{
+			"id": "3cf9c937-dac9-84c4-e838-6c5c8aed267c",
+			"headers": "",
+			"url": "https://br.api.pvp.net/api/lol/br/v1.2/champion/266?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5016d69f-4f18-18f7-9da2-83347ea2ff7f",
+			"data": null,
+			"dataMode": "params",
+			"name": "champion_byid",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1466984554125,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "da05fee1-8d01-c651-26bb-f340ab0c9cb2"
+		},
+		{
+			"id": "6e84c488-7b96-e2b2-0c4d-f425ea3069c3",
+			"headers": "",
+			"url": "https://br.api.pvp.net/api/lol/br/v1.2/champion?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f&freeToPlay=true",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5016d69f-4f18-18f7-9da2-83347ea2ff7f",
+			"data": null,
+			"dataMode": "params",
+			"name": "champion_freetoplay",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1466984458825,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "da05fee1-8d01-c651-26bb-f340ab0c9cb2"
+		}
+	]
+}
