@@ -13,6 +13,22 @@ A League Of Legends -MOBA game- collection website.
 - Collected Skins Champions;
 - Collected Skins Wards;
 
+## Riot API Tracks
+
+- Champion
+- Championmastery
+- Current-game
+- Featured-games
+- Game
+- League
+- Lol-static-data
+- Lol-status
+- Match
+- Matchlist
+- Stats
+- Summoner
+- Team
+
 ## Plataform Goals
 
 - Web Site;
