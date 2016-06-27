@@ -14,6 +14,89 @@
 				"3cf9c937-dac9-84c4-e838-6c5c8aed267c"
 			],
 			"owner": "237533"
+		},
+		{
+			"id": "736ea222-350a-dd7f-1cad-53861128ee26",
+			"name": "championmastery",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "603d2982-d2fb-e784-60b5-d38c3d3158e5",
+			"name": "current-game",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "d873ef02-d82d-0c6e-3e3c-cc11073f4d34",
+			"name": "featured-games",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "82529ad9-fbf1-3ade-65b7-7e86885da96d",
+			"name": "game",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "31b7da4f-4727-9892-ec2c-ab4338410fbd",
+			"name": "league",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "beffb0d1-53e6-e7db-0e59-87720335beec",
+			"name": "lol-static-data",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "71a52474-1362-563f-7336-10894d0490ed",
+			"name": "lol-status",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "ee7ac34b-013f-8eae-8d77-17bd50eebec6",
+			"name": "match",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "c2a26909-f6c0-5ec0-5700-e6713a312546",
+			"name": "matchlist",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "03c2a76d-691f-931a-c6e9-48bfb7fe6ae0",
+			"name": "stats",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "243456c4-4d44-89c5-8027-4dde04df5fa6",
+			"name": "summoner",
+			"description": "",
+			"order": [],
+			"owner": "237533"
+		},
+		{
+			"id": "ac1f6dc8-4649-1518-0f75-fe6204a49311",
+			"name": "team",
+			"description": "",
+			"order": []
 		}
 	],
 	"timestamp": 1466982765616,
