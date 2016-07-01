@@ -15,6 +15,8 @@ A League Of Legends -MOBA game- collection website.
 
 ## Riot API Tracks
 
+** See the Issue [Mapping Riot API](https://github.com/chroda/lolcollector/issues/3) to more info about it. **
+
 - Champion
 - Championmastery
 - Current-game
@@ -28,6 +30,7 @@ A League Of Legends -MOBA game- collection website.
 - Stats
 - Summoner
 - Team
+
 
 ## Plataform Goals
 

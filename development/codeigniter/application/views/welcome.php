@@ -12,7 +12,7 @@
     <h2>Some tests... hello word?</h2>
     <ul>
       <li><?php echo anchor(site_url(),'home page'); ?></li>
-      <li><?php echo anchor('api/lolc/users','users test api'); ?></li>
+      <li><?php echo anchor(site_url('api/lolc/users'),'users test api'); ?></li>
     </ul>
   </body>
 </html>
