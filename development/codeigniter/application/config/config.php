@@ -23,7 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+switch ($_SERVER['SERVER_NAME']) {
+  case 'www.lolcollector.com.br': header('location:http://lolcollector.com.br/')                      ;break;
+  case 'lolcollector.com.br'    : $base_url = 'http://lolcollector.com.br/'                           ;break;
+  default                       : $base_url = 'http://localhost/lolcollector/development/codeigniter/';break;
+}
+$config['base_url'] = $base_url;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +41,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
