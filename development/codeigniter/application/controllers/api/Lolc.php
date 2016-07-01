@@ -1,6 +1,4 @@
-<?php
-
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 // This can be removed if you use __autoload() in config.php OR use Modular Extensions
 require APPPATH . '/libraries/REST_Controller.php';
@@ -16,7 +14,7 @@ require APPPATH . '/libraries/REST_Controller.php';
  * @license         MIT
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  */
-class Example extends REST_Controller {
+class Lolc extends REST_Controller {
 
     function __construct()
     {
@@ -34,8 +32,8 @@ class Example extends REST_Controller {
     {
         // Users from a data store e.g. database
         $users = [
-            ['id' => 1, 'name' => 'John', 'email' => 'john@example.com', 'fact' => 'Loves coding'],
-            ['id' => 2, 'name' => 'Jim', 'email' => 'jim@example.com', 'fact' => 'Developed on CodeIgniter'],
+            ['id' => 1, 'name' => 'Chroda', 'email' => 'chroda@chroda.com.br', 'fact' => 'Loves coding, loves github!'],
+            ['id' => 2, 'name' => 'Jim', 'email' => 'jim@example.com', 'fact' => 'This data is a fake!'],
             ['id' => 3, 'name' => 'Jane', 'email' => 'jane@example.com', 'fact' => 'Lives in the USA', ['hobbies' => ['guitar', 'cycling']]],
         ];
 
