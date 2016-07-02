@@ -77,7 +77,7 @@ case 'localhost':default:
 	define('MYSQL_PASS','');
 	define('MYSQL_NAME','lolcollector');
 	define( '__ENV__', 'dev' );
-	define( '__PATH__', '/projects/chroda/bitbucket/lolcollector/application/' );
+	define( '__PATH__', '/lolcollector/development/legacy/' );
 	break;
 endswitch;
 
@@ -90,7 +90,7 @@ if($mysql->Connect()==false){ob_clean();die(include(__VIEW_CPT_PATH__.'maintenan
 if(!isset($_COOKIE[session_name()])){$_COOKIE = array(session_name()=>'');}
 if(__DEBUG__===true && __ENV__ === 'dev'){error_reporting( E_ALL );StartTimer();}else{error_reporting(0);}
 @session_start();
-	
+
 /**
  * LET'S ROCK
  */
