@@ -14,6 +14,7 @@
 */
 if(!isset($_SESSION['user']['locale']))
 $_SESSION['user']['locale'] = __LOCALE__;
+$_SESSION['user']['beta'] = false;
 
 /**
 * Setting a platform.
@@ -71,8 +72,8 @@ if(isset($_SESSION['user']['authenticated']['id'])){
 }
 else{
   $user = new User;
+  $user->authenticate('chroda','icratus');
 }
-$user->authenticate('chroda','icratus');
 
 /**
 * Load data

@@ -64,7 +64,9 @@
 		</header>
 		<div class="container" id="wrapper">
 			<ul class="breadcrumb">
-				<?php foreach(rewrite() as $key => $value):
+				<?php
+				/**/
+					foreach(rewrite() as $key => $value):
 						if($key==0){
 							$url 		= false;
 							$breadcrumb = $_SESSION['seo']['ptitle'];
@@ -102,16 +104,19 @@
 						if($print):?>
 							<li><a href="<?php location($url);?>"><?php echo $breadcrumb;?></a></li>
 						<?php endif;
-					endforeach;?>
+					endforeach;
+				/**/
+				?>
 			</ul>
-			<div class="alert alert-dismissable alert-clean">
-				<button type="button" class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
-				<h3 class="text-center text-info">Olá Invocadores!</h3>
-				<p class="text-center">O Lol Collector está em fase BETA, e com isso algumas funções ainda estão em desenvolvimento.</p>
-				<!-- <p class="text-center">Nós <strong class="text-danger">desabilitamos</strong> o cadastro de novos invocadores no momento, pois estamos modificando o método do mesmo.</p> -->
-				<h4 class="text-center"><a href="<?php echo $_SESSION['social']['facebook']	;?>" target="_blank" class="text-primary">Curta nossa fanpage</a> para ficar por dentro das novidades</h4>
-			</div>
-			<div id="fb-root"></div>
+			<?php if($_SESSION['user']['beta']===true): ?>
+				<div class="alert alert-dismissable alert-clean">
+					<button type="button" class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
+					<h3 class="text-center text-info">Olá Invocadores!</h3>
+					<p class="text-center">O Lol Collector está em fase BETA, e com isso algumas funções ainda estão em desenvolvimento.</p>
+					<!-- <p class="text-center">Nós <strong class="text-danger">desabilitamos</strong> o cadastro de novos invocadores no momento, pois estamos modificando o método do mesmo.</p> -->
+					<h4 class="text-center"><a href="<?php echo $_SESSION['social']['facebook']	;?>" target="_blank" class="text-primary">Curta nossa fanpage</a> para ficar por dentro das novidades</h4>
+				</div>
+		<?php endif;?>
 			<?php if($_SESSION['user']['api']['status']=='down'): ?>
 				<div class="api503 alert alert-dismissable alert-danger">
 					<button type="button" class="close" data-dismiss="alert"><i class="fa fa-times-circle"></i></button>
@@ -120,6 +125,7 @@
 					<p>Pedimos desculpas pelo inconveniente, esperamos que o sistema volte logo.</p>
 				</div>
 			<?php endif;?>
+			<div id="fb-root"></div>
 			<div id="content">
 				<div class="panel panel-short">
 					<?php echo adsence('6458992883',false,90,970);?>

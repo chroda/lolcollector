@@ -69,9 +69,6 @@ elseif(rewrite(1)==''||rewrite(1)=='index'||rewrite(1)=='home'):
 	require_once(__VIEW_PATH__.'components/header.php');
 	include_once(__VIEW_PATH__.'home'.__VIEW_EXT__);
 	require_once(__VIEW_PATH__.'components/footer.php');
-//elseif(array_search(end(@rewrite()),array('en'=>'en','es'=>'es','pt'=>'pt'))):
-//	$_SESSION['user']['locale']=end(@rewrite());
-//	header('Location:'.location(removeLastCharacter(rewrite(0),'',2),true));
 elseif(array_search(rewrite(1),$_SESSION['pages'])):
 	/**
 	 * Renders page registered in the bootstrap file.
