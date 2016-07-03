@@ -71,8 +71,8 @@ if(isset($_SESSION['user']['authenticated']['id'])){
   if(isset($_GET['logout'])){$user->logout();}
 }
 else{
+  // $user->authenticate('chroda','icratus');
   $user = new User;
-  $user->authenticate('chroda','icratus');
 }
 
 /**
@@ -137,4 +137,4 @@ $_SESSION['seo']['page'] = $seo_title;
 isset($seo_description) ? $_SESSION['seo']['description'] = $seo_description : null ;
 
 // pr($_SESSION);
-// pr($db);
+// pr($user);
