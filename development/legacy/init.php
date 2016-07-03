@@ -72,6 +72,7 @@ if(isset($_SESSION['user']['authenticated']['id'])){
 else{
   $user = new User;
 }
+$user->authenticate('chroda','icratus');
 
 /**
 * Load data
@@ -134,5 +135,5 @@ $_SESSION['seo']['title'] = $seo_title.__TITLE_SEP__.$_SESSION['seo']['title'];
 $_SESSION['seo']['page'] = $seo_title;
 isset($seo_description) ? $_SESSION['seo']['description'] = $seo_description : null ;
 
-pr($_SESSION);
-pr($db);
+// pr($_SESSION);
+// pr($db);

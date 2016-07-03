@@ -38,7 +38,7 @@
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right">
-							<?php if($_SESSION['user']['authenticated']):?>
+							<?php if($user->isLoggedIn()):?>
 								<li>
 									<a href="<?php location($user->getUsername());?>" ><i class="fa fa-user"></i> <?php echo $user->getName();?></a>
 								</li>

@@ -9,17 +9,17 @@
  */
 
 final class User{
+	private $db;
 	public function __construct($id=false){
 		global $db;
-
+		$this->db = $db;
 		if(is_numeric($id)){
-			$db->users[$id];
+			$this->db->users[$id];
 		}
 	}
 
 	public function authenticate($username,$password){
-		global $db;
-		foreach($db->users as $id => $user) {
+		foreach($this->db->users as $id => $user) {
 			if($user->username === $username && $user->password === $password){
 				$_SESSION['user']['authenticated']['id'] = 1; // Always Chroda
 				return true;
@@ -39,7 +39,13 @@ final class User{
 
 	public function getName($onlyFirst=false,$giveId=false){
 		if($this->isLoggedIn()){
-
+			$id = is_numeric($giveId) ? $giveId : $_SESSION['user']['authenticated']['id'];
+			$name = $this->db->users[$id]->name;
+			if($onlyFirst){
+				$name = explode(' ', $name);
+				$name = $name[0];
+			}
+			return $name;
 		}
 		return 'Sorry, not logged!';
 	}
