@@ -40,7 +40,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<?php if($user->isLoggedIn()):?>
 								<li>
-									<a href="<?php location($user->getUsername());?>" ><i class="fa fa-user"></i> <?php echo $user->getName();?></a>
+									<a href="<?php location($user->getUsername());?>" ><i class="fa fa-user"></i> <?php echo $user->getName(true);?></a>
 								</li>
 								<li>
 									<a href="<?php location('user?logout');?>" ><i class="fa fa-sign-out"></i> Sair</a>
