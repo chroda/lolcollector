@@ -26,20 +26,19 @@
 							<a class="navbar-brand " href="<?php location(false,false,false);?>"><img src="<?php echo CDN_DIR;?>img/nav-logo.png" /></a>
 						</div>
 					<?php endif;?>
-					
+
 					<div class="navbar-collapse" id="navbar-collapse">
 						<ul class="nav navbar-nav navbar-left">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Navegação</span></button>
-							<li><a href="<?php location('list-summoners');?>"><i class="fa fa-users"></i> Lista de Invocadores <span class="badge btn-lolc"><?php echo count($summoners);?></span></a></li>
-							<!-- <li><a href="<?php location('donations');?>"><i class="fa fa-users"></i> Ajude </a></li> -->
+							<li>
+								<a href="<?php location('list-summoners');?>">
+									<i class="fa fa-users"></i> Lista de Invocadores <span class="badge btn-lolc"><?php echo count($summoners);?></span>
+								</a>
+							</li>
 						</ul>
+
 						<ul class="nav navbar-nav navbar-right">
-							<?php if($user->isLoggedIn()):?>
-							<!-- 
-								<li>
-									<a href="<?php location('user/'.$user->getUsername().'/configuration');?>" ><i class="fa fa-user"></i> Configurar</a>
-								</li>
-							-->
+							<?php if($_SESSION['user']['authenticated']):?>
 								<li>
 									<a href="<?php location($user->getUsername());?>" ><i class="fa fa-user"></i> <?php echo $user->getName();?></a>
 								</li>
@@ -58,19 +57,6 @@
 									</form>
 								</li>
 							<?php endif;?>
-							<?php /** /?>
-								<li>
-									<!-- INICIO FORMULARIO BOTAO PAGSEGURO -- >
-									<form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
-										<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -- >
-										<input type="hidden" name="receiverEmail" value="christianmarcell@gmail.com" />
-										<input type="hidden" name="currency" value="BRL" />
-										<input type="hidden" name="donationValue" value="10" />
-										<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/209x48-doar-cinza-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-									</form>
-									<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-								</li>
-							<? /**/?>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->

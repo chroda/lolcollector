@@ -65,7 +65,7 @@ case 'www.lolcollector.com.br':
 	define('MYSQL_PASS','xQ30CuUG5I');
 	define('MYSQL_NAME','u657450779_lolc');
 	define( '__ENV__', 'prod' );
-	define( '__PATH__', '/' );
+	define( '__PATH__', '/legacy/' );
 	break;
 
 /**
@@ -81,16 +81,19 @@ case 'localhost':default:
 	break;
 endswitch;
 
+pr(__PATH__);
+die;
+
 define('CDN_DIR',__PATH__ .'cdn/');
 define('DATA_DIR',__PATH__ .'data/');
 define('PKG_DIR','http://'.__IP__.'/pkg/');
-//include __CONTROLLERS_DIR__.'MySQL.php';
-//$mysql=new MySQL;
-//if($mysql->Connect()==false){ob_clean();die(include(__VIEW_CPT_PATH__.'maintenance.php'));}
+include __CONTROLLERS_DIR__.'MySQL.php';
+$mysql=new MySQL;
+if($mysql->Connect()==false){ob_clean();die(include(__VIEW_CPT_PATH__.'maintenance.php'));}
+if(!isset($_COOKIE[session_name()])){$_COOKIE = array(session_name()=>'');}
+if(__DEBUG__===true && __ENV__ === 'dev'){error_reporting( E_ALL );StartTimer();}else{error_reporting(0);}
+@session_start();
 
-$obj = json_decode(file_get_contents('db.json'));
-$db = new StdClass;
-$db->users = [];
-foreach ($obj->users as $id => $user) $db->users[$user->id] = $user;
-
-session_start();
+/**
+ * LET'S ROCK
+ */

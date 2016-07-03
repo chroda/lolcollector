@@ -1,3 +1,4 @@
+php_flag display_errors 1
 <IfModule mod_deflate.c>
 # Insert filters
 AddOutputFilterByType DEFLATE text/plain

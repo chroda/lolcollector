@@ -1,0 +1,31 @@
+{
+  "users" : [
+    {
+      "id" : 1,
+      "name" : "chroda",
+      "username" : "chroda",
+      "password": "icratus",
+      "sex": 1,
+      "champions": 132,
+      "champions_skins": 159
+    },
+    {
+      "id" : 2,
+      "name" : "katanako",
+      "username" : "katanako",
+      "password": "dhm",
+      "sex": 2,
+      "champions": 3,
+      "champions_skins": 1
+    },
+    {
+      "id" : 3,
+      "name" : "pakelkopf5",
+      "username" : "pakelkopf5",
+      "password": "page5",
+      "sex": 1,
+      "champions": 37,
+      "champions_skins": 40
+    }
+  ]
+}
