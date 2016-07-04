@@ -1,5 +1,8 @@
 <?php
-	$mysql->Select('champion' ,array(),'name');
+
+  $mysql->Select('champion' ,array(),'name');
+
+
   $champions = $mysql->aArrayedResults;
 	$mysql->Select('skinchampion' ,array(),'name');
   $skins = $mysql->aArrayedResults;
