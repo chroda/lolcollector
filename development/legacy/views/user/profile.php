@@ -1,6 +1,6 @@
 <?php
-
-  pr(count($champions));die;
+	echo 'em desenvolvimento ;)';
+	die;
   $mysql->Select('champion' ,array(),'name');
 
 

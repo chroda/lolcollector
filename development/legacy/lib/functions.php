@@ -64,8 +64,11 @@ function rewrite($_index='none') {
 				$_return=$_tmp[0];
 			}
 		}
+		$_return = str_replace('%20',' ',$_return);
 		return $_return;
-	}else{return $_rewrite;
+	}else{
+		$_rewrite = str_replace('%20',' ',$_rewrite);
+		return $_rewrite;
 	}
 }
 function removeLastCharacter($_str=false,$_last='',$_remove=1){
