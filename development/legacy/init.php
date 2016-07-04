@@ -78,10 +78,7 @@ else{
 /**
 * Load data
 */
-$db_champions = json_decode(file_get_contents('db_champions.json'));
-$champions = $db_champions->champions;
-pr($champions);die;
-
+$champions = $db->champions;
 $summoners = $db->users;
 
 /**

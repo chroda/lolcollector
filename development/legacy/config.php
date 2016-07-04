@@ -90,6 +90,7 @@ define('PKG_DIR','http://'.__IP__.'/pkg/');
 
 $obj = json_decode(file_get_contents('db.json'));
 $db = new StdClass;
+$db->champions = (array)$obj->champions->data;
 $db->users = [];
 foreach ($obj->users as $id => $user){
 	$db->users[$user->id] = $user;

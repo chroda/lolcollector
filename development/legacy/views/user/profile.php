@@ -1,5 +1,6 @@
 <?php
 
+  pr(count($champions));die;
   $mysql->Select('champion' ,array(),'name');
 
 
