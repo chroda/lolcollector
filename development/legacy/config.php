@@ -84,13 +84,13 @@ endswitch;
 define('CDN_DIR',__PATH__ .'cdn/');
 define('DATA_DIR',__PATH__ .'data/');
 define('PKG_DIR','http://'.__IP__.'/pkg/');
-//include __CONTROLLERS_DIR__.'MySQL.php';
-//$mysql=new MySQL;
-//if($mysql->Connect()==false){ob_clean();die(include(__VIEW_CPT_PATH__.'maintenance.php'));}
 
-$obj = json_decode(file_get_contents('db.json'));
+$obj = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
 $db = new StdClass;
+$db->champions = (array)$obj->champions->data;
 $db->users = [];
-foreach ($obj->users as $id => $user) $db->users[$user->id] = $user;
+foreach ($obj->users as $id => $user){
+	$db->users[$user->id] = $user;
+}
 
 session_start();

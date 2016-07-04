@@ -1,16 +1,12 @@
-<?php
-
-
-//pr(__APP_RIOTAPI_KEYS__);
-//pr(unserialize(__APP_RIOTAPI_KEYS__));
-
-?>
-
-
 <div class="jumbotron">
 	<?php if($user->isLoggedIn()):?>
-		Olá invocador, sua página de coleção esta ativa em <a href="<?php echo location('user/signup'); ?>" class="btn btn-lolc btn-lg btn-block">Registrar-se!</a>
-
+		<h1>Bem vindo <?php echo $user->getName(true);?>!</h1>
+		<h2>
+			Sua página de coleção esta ativa em
+			<a href="<?php echo location($user->getUsername());?>" class="btn btn-lolc btn-lg">
+				lolcollector.com.br/<?php echo $user->getUsername();?>
+			</a>
+		</h2>
 	<?php else:?>
 		<h1>Bem vindos Invocadores!</h1>
 		<h2>Este é o League of Legends Collector.</h2>

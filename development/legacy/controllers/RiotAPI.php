@@ -152,7 +152,6 @@ class RiotAPI{
     return $this->request($call);
   }
 
-
   public function getTeam($id){
     $call = 'team/by-summoner/' . $id;
 
