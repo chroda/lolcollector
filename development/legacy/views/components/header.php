@@ -77,9 +77,8 @@
 							$breadcrumb = $_SESSION['seo']['page'];
 							$print 		= true;
 						}elseif($key == 1 && rewrite(1)=='user' && rewrite(2)!='signup'){
-							// $mysql->Select('user',array('username'=>rewrite(2)));
 							$url 		= rewrite(1).'/'.rewrite(2);
-							$breadcrumb = $mysql->aArrayedResults[0]['name'];
+							$breadcrumb = rewrite(2);
 							$print 		= true;
 						}elseif($key == 2 && rewrite(1)=='user' && rewrite(2)!='signup' && rewrite(3)=='champions'){
 							$url 		= rewrite(0);

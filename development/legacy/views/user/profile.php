@@ -1,11 +1,22 @@
 <?php
-	$mysql->Select('champion'			,array(),'name');					$champions 													= $mysql->aArrayedResults;
-	$mysql->Select('skinchampion'		,array(),'name');					$skins 														= $mysql->aArrayedResults;
-	$mysql->Select('user'				,array('username'=>rewrite(2)));	$profile 													= $mysql->aArrayedResults[0];
-	$mysql->Select('user_champion'		,array('user_id'=>$profile['id']));	$collectionChampions										= $mysql->iRecords;
-	if($mysql->iAffected>0){foreach($mysql->aArrayedResults as $championColected){$championsColected[$championColected['champion_id']]	= $championColected;}}
-	$mysql->Select('user_skinchampion'	,array('user_id'=>$profile['id']));	$collectionChampionsSkins									= $mysql->iRecords;
-	if(rewrite(3)==''){echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';}
+	$mysql->Select('champion' ,array(),'name');
+  $champions = $mysql->aArrayedResults;
+	$mysql->Select('skinchampion' ,array(),'name');
+  $skins = $mysql->aArrayedResults;
+	$mysql->Select('user' ,array('username'=>rewrite(2)));
+  $profile = $mysql->aArrayedResults[0];
+	$mysql->Select('user_champion' ,array('user_id'=>$profile['id']));
+  $collectionChampions = $mysql->iRecords;
+	if($mysql->iAffected>0){
+    foreach($mysql->aArrayedResults as $championColected){
+      $championsColected[$championColected['champion_id']]	= $championColected;
+    }
+  }
+	$mysql->Select('user_skinchampion'	,array('user_id'=>$profile['id']));
+	$collectionChampionsSkins = $mysql->iRecords;
+	if(rewrite(3)==''){
+    echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';
+  }
 ?>
 <div class="panel panel-<?php echo $profile['sex']=='1'?'primary':'info';?>">
 	<div class="panel-heading">
@@ -17,7 +28,7 @@
 			<h3 class="panel-title">
 				Coleção d<?php echo $profile['sex']=='1'?'o':'a';?> Invocador<?php echo $profile['sex']=='1'?'':'a';?> <strong><?php echo $profile['name'];?></strong> :
 				<div class="pull-right">
-					<div class="fb-share-button" data-href="<?php location('user/'.rewrite(2).'/'.rewrite(3));?>" data-type="button"></div> 
+					<div class="fb-share-button" data-href="<?php location('user/'.rewrite(2).'/'.rewrite(3));?>" data-type="button"></div>
 				</div>
 			</h3>
 			<br clear="all"/>
@@ -34,12 +45,12 @@
 		<span id="userId"><?php echo $profile['id'];?></span>
 		<span id="numberOwned">
 			<h5>
-				Este invocador tem na sua coleção 
+				Este invocador tem na sua coleção
 				<span id="collectionChampion" 	class="badge btn-<?php echo $profile['sex']=='1'?'primary':'info';?>"><?php echo $collectionChampions;?></span>
 				de
 				<span id="champions" 	class="badge btn-lolc"><?php echo count($champions);?></span>
 				campeões.
-				
+
 				E possui
 				<span id="collectionSkin" 	class="badge btn-<?php echo $profile['sex']=='1'?'primary':'info';?>"><?php echo $collectionChampionsSkins;?></span>
 				de
@@ -62,7 +73,7 @@
 					<?php foreach($champions as $champion):?>
 						<?php $class='';$mysql->Select('user_champion',array('user_id'=>$profile['id'],'champion_id'=>$champion['id']));if($mysql->iRecords){$class = 'class="owned"';}?>
 						<li>
-							<img src="<?php echo CDN_DIR.'img/champions/'.ucfirst(str_replace(' ','',str_replace('.','',str_replace('-','',str_replace('\'','',$champion['name']))))).'_Square_0.png';?>" alt="<?php echo $champion['id'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php echo $champion['name'];?>"/>		
+							<img src="<?php echo CDN_DIR.'img/champions/'.ucfirst(str_replace(' ','',str_replace('.','',str_replace('-','',str_replace('\'','',$champion['name']))))).'_Square_0.png';?>" alt="<?php echo $champion['id'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php echo $champion['name'];?>"/>
 						</li>
 					<?php endforeach;?>
 				</ul>
@@ -77,8 +88,8 @@
 						<?php foreach($skins as $skin):?>
 							<?php $class='';$mysql->Select('user_skinchampion',array('user_id'=>$profile['id'],'champion_id'=>$skin['champion_id'],'number'=>$skin['number']));if($mysql->iRecords){$class = 'class="owned"';}?>
 							<li>
-								<img src="<?php echo CDN_DIR.'img/skins/champion/'.$champion['riot_key'].'_'.$skin['number'].'.jpg';?>" alt="<?php echo $skin['champion_id'].'_'.$skin['number'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="<?php echo utf8_decode($skin['name']);?>" data-original-title="<?php echo utf8_decode($skin['name']);?>"/>		
-							</li>	
+								<img src="<?php echo CDN_DIR.'img/skins/champion/'.$champion['riot_key'].'_'.$skin['number'].'.jpg';?>" alt="<?php echo $skin['champion_id'].'_'.$skin['number'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="<?php echo utf8_decode($skin['name']);?>" data-original-title="<?php echo utf8_decode($skin['name']);?>"/>
+							</li>
 						<?php endforeach;?>
 						<br clear="all">
 						<hr/>
@@ -90,13 +101,13 @@
 					<h2>
 						Em Breve uma sessão de estatísticas sobre o invocador.
 
-						<?php 
+						<?php
 							//pr($profile);
 						?>
 					</h2>
 				</div>
 				<?php break;
-		endswitch;?> 
+		endswitch;?>
 	</div>
 	<!-- <div class="panel-footer"></div> -->
 </div>
