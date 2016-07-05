@@ -1,30 +1,45 @@
 <?php
-	foreach ($champions as $key => $champion) {
-		pr($key);
-		pr($champion);
+	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/6.12.1/img/champion/championKey.png';
+	$skinloadingUrl = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/championKey_0.jpg';
+	// pr($champions);
+	?>
 
-	}
+	<ul id="championsList">
+		<?php foreach($champions as $championName => $champion): ?>
+			<li style="margin:10px">
+				<img src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
+					alt="<?php echo $champion->id;?>"
+					class="owned"
+					data-toggle="tooltip"
+					data-placement="top"
+					title="<?php echo $champion->name;?>"
+					data-original-title="<?php echo $champion->name;?>
+				"/>
+			</li>
+		<?php endforeach;?>
+	</ul>
+<?php
+
+	//
+
+	// $mysql->Select('skinchampion' ,array(),'name');
+  // $skins = $mysql->aArrayedResults;
+	// $mysql->Select('user' ,array('username'=>rewrite(2)));
+  // $profile = $mysql->aArrayedResults[0];
+	// $mysql->Select('user_champion' ,array('user_id'=>$profile['id']));
+  // $collectionChampions = $mysql->iRecords;
+	// if($mysql->iAffected>0){
+    // foreach($mysql->aArrayedResults as $championColected){
+      // $championsColected[$championColected['champion_id']]	= $championColected;
+    // }
+  // }
+	// $mysql->Select('user_skinchampion'	,array('user_id'=>$profile['id']));
+	// $collectionChampionsSkins = $mysql->iRecords;
+	// if(rewrite(3)==''){
+  //   echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';
+  // }
+
 	die;
-  $mysql->Select('champion' ,array(),'name');
-
-
-  $champions = $mysql->aArrayedResults;
-	$mysql->Select('skinchampion' ,array(),'name');
-  $skins = $mysql->aArrayedResults;
-	$mysql->Select('user' ,array('username'=>rewrite(2)));
-  $profile = $mysql->aArrayedResults[0];
-	$mysql->Select('user_champion' ,array('user_id'=>$profile['id']));
-  $collectionChampions = $mysql->iRecords;
-	if($mysql->iAffected>0){
-    foreach($mysql->aArrayedResults as $championColected){
-      $championsColected[$championColected['champion_id']]	= $championColected;
-    }
-  }
-	$mysql->Select('user_skinchampion'	,array('user_id'=>$profile['id']));
-	$collectionChampionsSkins = $mysql->iRecords;
-	if(rewrite(3)==''){
-    echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';
-  }
 ?>
 <div class="panel panel-<?php echo $profile['sex']=='1'?'primary':'info';?>">
 	<div class="panel-heading">
