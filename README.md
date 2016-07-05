@@ -2,10 +2,19 @@
 
 A League Of Legends -MOBA game- collection website.
 
-## Tutos
+## Management
 
-- I've being looking a bunch of tutorials, with time I will put the list here.
-- [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
+We using [Waffle.io](https://waffle.io/chroda/lolcollector) to managenament.
+
+
+[badge_ready]:https://badge.waffle.io/chroda/lolcollector.svg?label=ready&title=Ready "Issues Ready"
+[badge_inprogress]:https://badge.waffle.io/chroda/lolcollector.svg?label=in%20progress&title=In%20Progress "Issues In Progress"
+
+![[alt text](http://waffle.io/chroda/lolcollector)][badge_ready]
+![[alt text](http://waffle.io/chroda/lolcollector)][badge_inprogress]
+
+[![Throughput Graph](https://graphs.waffle.io/chroda/lolcollector/throughput.svg)](https://waffle.io/chroda/lolcollector/metrics/throughput)
+
 
 ## Production Goals
 
