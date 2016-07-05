@@ -4,7 +4,7 @@ A League Of Legends -MOBA game- collection website.
 
 ## Management
 
-We using [Waffle.io](https://waffle.io/chroda/lolcollector) to managenament.
+We using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project management.
 
 
 [badge_ready]:https://badge.waffle.io/chroda/lolcollector.svg?label=ready&title=Ready "Issues Ready"
