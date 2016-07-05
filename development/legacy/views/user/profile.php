@@ -1,5 +1,11 @@
 <?php
 	echo 'em desenvolvimento ;)';
+	ksort($champions);
+	foreach ($champions as $key => $champion) {
+		pr($key);
+		pr($champion);
+
+	}
 	die;
   $mysql->Select('champion' ,array(),'name');
 

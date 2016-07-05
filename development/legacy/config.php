@@ -87,10 +87,15 @@ define('PKG_DIR','http://'.__IP__.'/pkg/');
 
 $obj = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
 $db = new StdClass;
-$db->champions = (array)$obj->champions->data;
+//$db->champions = (array)$obj->champions->data;
 $db->users = [];
-foreach ($obj->users as $id => $user){
-	$db->users[$user->id] = $user;
+$db->champions = [];
+foreach ($obj->users as $id => $dbUser){
+	$db->users[$dbUser->id] = $dbUser;
 }
+foreach ($obj->champions->data as $id => $dbChampions){
+	$db->champions[$dbChampions->name] = $dbChampions;
+}
+ksort($db->champions);
 
 session_start();
