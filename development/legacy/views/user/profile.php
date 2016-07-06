@@ -1,7 +1,15 @@
 <?php
 	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/6.12.1/img/champion/championKey.png';
 	$skinloadingUrl = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/championKey_0.jpg';
-	// pr($champions);
+
+	foreach($db->users as $profileId => $profileUser) {
+		if($profileUser->username === rewrite(2)){
+			$profile = $db->users[$profileId];
+		}
+	}
+	pr($profile);
+	$profileColor = ($profile->sex === 1) ? 'primary':'info';
+	/*
 	?>
 
 	<ul id="championsList">
@@ -19,29 +27,15 @@
 		<?php endforeach;?>
 	</ul>
 <?php
+*/
 
-	//
-
-	// $mysql->Select('skinchampion' ,array(),'name');
-  // $skins = $mysql->aArrayedResults;
-	// $mysql->Select('user' ,array('username'=>rewrite(2)));
-  // $profile = $mysql->aArrayedResults[0];
-	// $mysql->Select('user_champion' ,array('user_id'=>$profile['id']));
-  // $collectionChampions = $mysql->iRecords;
-	// if($mysql->iAffected>0){
-    // foreach($mysql->aArrayedResults as $championColected){
-      // $championsColected[$championColected['champion_id']]	= $championColected;
-    // }
-  // }
-	// $mysql->Select('user_skinchampion'	,array('user_id'=>$profile['id']));
-	// $collectionChampionsSkins = $mysql->iRecords;
 	// if(rewrite(3)==''){
   //   echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';
   // }
 
-	die;
+	// die;
 ?>
-<div class="panel panel-<?php echo $profile['sex']=='1'?'primary':'info';?>">
+<div class="panel panel-<?php echo $profileColor;?>">
 	<div class="panel-heading">
 		<div class="col-lg-2">
 			<img class="img-thumbnail" src="http://avatar.leagueoflegends.com/br/<?php echo rewrite(2);?>.png"/>
@@ -49,7 +43,8 @@
 		<div class="col-lg-10">
 			<br clear="all"/>
 			<h3 class="panel-title">
-				Coleção d<?php echo $profile['sex']=='1'?'o':'a';?> Invocador<?php echo $profile['sex']=='1'?'':'a';?> <strong><?php echo $profile['name'];?></strong> :
+				Coleção d<?php echo $profile->sex===1 ? 'o' : 'a';?> Invocador<?php echo $profile->sex ===1 ? '' : 'a';?>
+				<strong><?php echo $profile->name;?></strong> :
 				<div class="pull-right">
 					<div class="fb-share-button" data-href="<?php location('user/'.rewrite(2).'/'.rewrite(3));?>" data-type="button"></div>
 				</div>
@@ -57,19 +52,25 @@
 			<br clear="all"/>
 			<br clear="all"/>
 			<ul class="nav nav-pills nav-justified">
-				<li class="<?php echo rewrite(3)=='champions'	?'active':null;?>"><a href="<?php location('user/'.$profile['username'].'/champions	');?>">Campeões</a></li>
-				<li class="<?php echo rewrite(3)=='skins'		?'active':null;?>"><a href="<?php location('user/'.$profile['username'].'/skins		');?>">Skins</a></li>
-				<li class="<?php echo rewrite(3)=='stats'		?'active':null;?>"><a href="<?php location('user/'.$profile['username'].'/stats		');?>">Stats</a></li>
+				<li class="<?php echo rewrite(3) === 'champions' ? 'active' : null;?>">
+					<a href="<?php location('user/'.$profile->username.'/champions');?>">Campeões</a>
+				</li>
+				<li class="<?php echo rewrite(3) === 'skins' ? 'active' : null;?>">
+					<a href="<?php location('user/'.$profile->username.'/skins');?>">Skins</a>
+				</li>
+				<li class="<?php echo rewrite(3) === 'stats' ? 'active' : null;?>">
+					<a href="<?php location('user/'.$profile->username.'/stats');?>">Stats</a>
+				</li>
 			</ul>
 		</div>
 		<br clear="all"/>
 	</div>
 	<div class="panel-body">
-		<span id="userId"><?php echo $profile['id'];?></span>
+		<span id="userId"><?php echo $profile->id;?></span>
 		<span id="numberOwned">
 			<h5>
 				Este invocador tem na sua coleção
-				<span id="collectionChampion" 	class="badge btn-<?php echo $profile['sex']=='1'?'primary':'info';?>"><?php echo $collectionChampions;?></span>
+				<span id="collectionChampion" 	class="badge btn-<?php echo $profileColor;?>"><?php echo $collectionChampions;?></span>
 				de
 				<span id="champions" 	class="badge btn-lolc"><?php echo count($champions);?></span>
 				campeões.

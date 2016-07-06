@@ -4,7 +4,8 @@ final class User{
 	private $db;
 	public function __construct($id=false){
 		global $db;
-		$this->db = $db;
+		$this->db = new stdClass;
+		$this->db->users = $db->users;
 		if(is_numeric($id)){
 			$this->db->users[$id];
 		}
@@ -46,5 +47,16 @@ final class User{
 		$id = is_numeric($giveId) ? $giveId : $_SESSION['user']['authenticated']['id'];
 		return $this->db->users[$id]->username;
 	}
+
+	public function loadByUsername($username){
+		foreach($this->db->users as $id => $user) {
+			if($user->username === $username){
+				return new User($id);
+			}
+		}
+		return false;
+	}
+
+
 }
 ?>
