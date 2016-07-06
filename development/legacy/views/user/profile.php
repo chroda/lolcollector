@@ -7,33 +7,19 @@
 			$profile = $db->users[$profileId];
 		}
 	}
-	pr($profile);
+
+	//pr($profile);
+
 	$profileColor = ($profile->sex === 1) ? 'primary':'info';
-	/*
-	?>
+	$profileTextGender = ($profile->sex === 1) ? 'do Invocador':'da Invocadora';
 
-	<ul id="championsList">
-		<?php foreach($champions as $championName => $champion): ?>
-			<li style="margin:10px">
-				<img src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
-					alt="<?php echo $champion->id;?>"
-					class="owned"
-					data-toggle="tooltip"
-					data-placement="top"
-					title="<?php echo $champion->name;?>"
-					data-original-title="<?php echo $champion->name;?>
-				"/>
-			</li>
-		<?php endforeach;?>
-	</ul>
-<?php
-*/
+	$collectionChampions = 1;
+	$collectionChampionsSkins = 1;
+	$skins = 1;
 
-	// if(rewrite(3)==''){
-  //   echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile['username'].'/champions/',true).'"/>';
-  // }
-
-	// die;
+	if(rewrite(3)==''){
+    echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile->username.'/champions/',true).'"/>';
+  }
 ?>
 <div class="panel panel-<?php echo $profileColor;?>">
 	<div class="panel-heading">
@@ -43,7 +29,7 @@
 		<div class="col-lg-10">
 			<br clear="all"/>
 			<h3 class="panel-title">
-				Coleção d<?php echo $profile->sex===1 ? 'o' : 'a';?> Invocador<?php echo $profile->sex ===1 ? '' : 'a';?>
+				Coleção <?php echo $profileTextGender;?>
 				<strong><?php echo $profile->name;?></strong> :
 				<div class="pull-right">
 					<div class="fb-share-button" data-href="<?php location('user/'.rewrite(2).'/'.rewrite(3));?>" data-type="button"></div>
@@ -70,15 +56,15 @@
 		<span id="numberOwned">
 			<h5>
 				Este invocador tem na sua coleção
-				<span id="collectionChampion" 	class="badge btn-<?php echo $profileColor;?>"><?php echo $collectionChampions;?></span>
+				<span id="collectionChampion" class="badge btn-<?php echo $profileColor;?>"><?php echo $collectionChampions;?></span>
 				de
-				<span id="champions" 	class="badge btn-lolc"><?php echo count($champions);?></span>
+				<span id="champions" class="badge btn-lolc"><?php echo count($champions);?></span>
 				campeões.
 
 				E possui
-				<span id="collectionSkin" 	class="badge btn-<?php echo $profile['sex']=='1'?'primary':'info';?>"><?php echo $collectionChampionsSkins;?></span>
+				<span id="collectionSkin" class="badge btn-<?php echo $profileColor;?>"><?php echo $collectionChampionsSkins;?></span>
 				de
-				<span id="skins" 		class="badge btn-lolc"><?php echo count($skins);?></span>
+				<span id="skins" class="badge btn-lolc"><?php echo count($skins);?></span>
 				skins.
 			</h5>
 		</span>
@@ -89,21 +75,28 @@
 		<hr/>
 		<?php switch(rewrite(3)):
 			case 'champions':?>
-				<?php if($user->isLoggedIn() === true && rewrite(2)==$user->getUsername()):?>
+				<?php if( ($user->isLoggedIn() === true) && (rewrite(2) === $user->getUsername()) ):?>
 					<button id="selectAll" class="btn btn-lolc btn-block"></button>
 					<hr/>
 				<?php endif;?>
 				<ul id="championsList">
-					<?php foreach($champions as $champion):?>
-						<?php $class='';$mysql->Select('user_champion',array('user_id'=>$profile['id'],'champion_id'=>$champion['id']));if($mysql->iRecords){$class = 'class="owned"';}?>
-						<li>
-							<img src="<?php echo CDN_DIR.'img/champions/'.ucfirst(str_replace(' ','',str_replace('.','',str_replace('-','',str_replace('\'','',$champion['name']))))).'_Square_0.png';?>" alt="<?php echo $champion['id'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php echo $champion['name'];?>"/>
+					<?php foreach($champions as $championName => $champion): ?>
+						<li style="margin:10px">
+							<img src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
+								alt="<?php echo $champion->id;?>"
+								class="owned"
+								data-toggle="tooltip"
+								data-placement="top"
+								title="<?php echo $champion->name;?>"
+								data-original-title="<?php echo $champion->name;?>
+							"/>
 						</li>
 					<?php endforeach;?>
 				</ul>
 				<?php break;
 			case 'skins':?>
 				<ul id="championsSkinsList">
+
 					<?php foreach($champions as $champion){?>
 						<?php if(!isset($championsColected[$champion['id']])){continue;}
 						$mysql->Select('skinchampion',array('riot_id'=>$champion['riot_id']));
@@ -118,20 +111,19 @@
 						<br clear="all">
 						<hr/>
 					<?php }?>
+
 				</ul>
 				<?php break;
 			case 'stats':?>
 				<div class="jumbotron">
 					<h2>
 						Em Breve uma sessão de estatísticas sobre o invocador.
-
 						<?php
-							//pr($profile);
+							pr($profile);
 						?>
 					</h2>
 				</div>
 				<?php break;
 		endswitch;?>
 	</div>
-	<!-- <div class="panel-footer"></div> -->
 </div>
