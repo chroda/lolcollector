@@ -82,7 +82,8 @@
 				<ul id="championsList">
 					<?php foreach($champions as $championName => $champion): ?>
 						<li style="margin:10px">
-							<img src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
+							<img
+								src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
 								alt="<?php echo $champion->id;?>"
 								class="owned"
 								data-toggle="tooltip"
@@ -96,22 +97,28 @@
 				<?php break;
 			case 'skins':?>
 				<ul id="championsSkinsList">
-
-					<?php foreach($champions as $champion){?>
-						<?php if(!isset($championsColected[$champion['id']])){continue;}
-						$mysql->Select('skinchampion',array('riot_id'=>$champion['riot_id']));
-						$skins = $mysql->aArrayedResults;?>
-						<h3><?php echo $champion['name'];?></h3>
+					<?php foreach($champions as $champion){
+						// if(!isset($championsColected)){continue;}
+						$skins = [1];
+						// pr($skins);
+						?>
+						<h3><?php echo $champion->name;?></h3>
 						<?php foreach($skins as $skin):?>
-							<?php $class='';$mysql->Select('user_skinchampion',array('user_id'=>$profile['id'],'champion_id'=>$skin['champion_id'],'number'=>$skin['number']));if($mysql->iRecords){$class = 'class="owned"';}?>
-							<li>
-								<img src="<?php echo CDN_DIR.'img/skins/champion/'.$champion['riot_key'].'_'.$skin['number'].'.jpg';?>" alt="<?php echo $skin['champion_id'].'_'.$skin['number'];?>" <?php echo $class;?> data-toggle="tooltip" data-placement="top" title="<?php echo utf8_decode($skin['name']);?>" data-original-title="<?php echo utf8_decode($skin['name']);?>"/>
+							<li style="margin:10px">
+								<img
+									src="<?php echo str_replace('championKey',$champion->key,$skinloadingUrl);?>"
+									alt="<?php echo $champion->id;?>_0"
+									class="owned"
+									data-toggle="tooltip"
+									data-placement="top"
+									title="<?php echo utf8_decode($champion->name);?>"
+									data-original-title="<?php echo utf8_decode($champion->name);?>
+								"/>
 							</li>
 						<?php endforeach;?>
 						<br clear="all">
 						<hr/>
 					<?php }?>
-
 				</ul>
 				<?php break;
 			case 'stats':?>

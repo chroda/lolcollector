@@ -1,4 +1,9 @@
-<?php require_once(__CONTROLLERS_DIR__.'User.php');if($user->isLoggedIn()){header('Location:'.location('user/'.$user->getUsername(),1));}?>
+<?php
+	require_once(__CONTROLLERS_DIR__.'FakeUser.php');
+	if($user->isLoggedIn()){
+		header('Location:'.location('user/'.$user->getUsername(),1));
+	}
+?>
 <fieldset>
 	<legend>Registrar</legend>
 	<div class="well well-lg">
@@ -12,7 +17,7 @@
 					</select>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Selecione o servidor.</small> 
+					<small class="text">Selecione o servidor.</small>
 				</div>
 			</div>
 			<div class="form-group">
@@ -21,13 +26,13 @@
 					<input type="text" class="form-control" id="<?php echo $i;?>" name="<?php echo $i;?>" placeholder="<?php echo $e;?>" value="<?php echo @$_POST[$i];?>" autocomplete="off"/>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Use o seu nome de invocador <strong class="text">visível</strong> no jogo.</small> 
+					<small class="text">Use o seu nome de invocador <strong class="text">visível</strong> no jogo.</small>
 				</div>
 			</div>
 			<div class="form-group has-success">
 				<label 	class="col-lg-3 	control-label" >Nome de Usuário</label>
 				<div class="col-lg-8 help-block">
-					<span class="text-primary lead" id="username">lolcollector.com/<strong class="text-info">nick</strong></span> 
+					<span class="text-primary lead" id="username">lolcollector.com/<strong class="text-info">nick</strong></span>
 				</div>
 			</div>
 			<div class="form-group">
@@ -36,7 +41,7 @@
 					<input type="password" class="form-control" id="<?php echo $i;?>" name="<?php echo $i;?>" placeholder="<?php echo $e;?>" value="<?php echo @$_POST[$i];?>" autocomplete="off"/>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Cadastre sua senha do <strong class="text">LoL Collector</strong>.</small> 
+					<small class="text">Cadastre sua senha do <strong class="text">LoL Collector</strong>.</small>
 				</div>
 			</div>
 			<div class="form-group">
@@ -45,7 +50,7 @@
 					<input type="password" class="form-control" id="<?php echo $i;?>" name="<?php echo $i;?>" placeholder="<?php echo $e;?>" value="<?php echo @$_POST[$i];?>" autocomplete="off"/>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Repita a senha.</small> 
+					<small class="text">Repita a senha.</small>
 				</div>
 			</div>
 			<div class="form-group">
@@ -54,7 +59,7 @@
 					<input type="email" class="form-control" id="<?php echo $i;?>" name="<?php echo $i;?>" placeholder="<?php echo $e;?>" value="<?php echo @$_POST[$i];?>" autocomplete="off"/>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Cadastre um email <strong class="text">válido</strong>.</small> 
+					<small class="text">Cadastre um email <strong class="text">válido</strong>.</small>
 				</div>
 			</div>
 			<div class="form-group">
@@ -63,7 +68,7 @@
 					<input type="email" class="form-control" id="<?php echo $i;?>" name="<?php echo $i;?>" placeholder="<?php echo $e;?>" value="<?php echo @$_POST[$i];?>" autocomplete="off"/>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Repita o email.</small> 
+					<small class="text">Repita o email.</small>
 				</div>
 			</div>
 			<div class="form-group">
@@ -79,7 +84,7 @@
 					</label>
 				</div>
 				<div class="col-lg-5 help-block">
-					<small class="text">Seu sexo.</small> 
+					<small class="text">Seu sexo.</small>
 				</div>
 			</div>
 			<div class="form-group">
