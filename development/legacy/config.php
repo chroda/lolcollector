@@ -85,15 +85,18 @@ define('CDN_DIR',__PATH__ .'cdn/');
 define('DATA_DIR',__PATH__ .'data/');
 define('PKG_DIR','http://'.__IP__.'/pkg/');
 
-$obj = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
+$usersJson = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
+$championsRiot = json_decode(file_get_contents('https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?champData=skins&api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f'));
+
 $db = new StdClass;
-//$db->champions = (array)$obj->champions->data;
 $db->users = [];
 $db->champions = [];
-foreach ($obj->users as $id => $dbUser){
+
+foreach ($usersJson->users as $id => $dbUser){
 	$db->users[$dbUser->id] = $dbUser;
 }
-foreach ($obj->champions->data as $id => $dbChampions){
+ksort($db->users);
+foreach ($championsRiot->data as $id => $dbChampions){
 	$db->champions[$dbChampions->name] = $dbChampions;
 }
 ksort($db->champions);

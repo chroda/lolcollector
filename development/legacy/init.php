@@ -78,8 +78,18 @@ else{
 /**
 * Load data
 */
-$champions = $db->champions;
 $summoners = $db->users;
+$champions = $db->champions;
+$skins = [];
+
+foreach ($champions as $champion) {
+	foreach($champion->skins as $skin) {
+    if($skin->num === 0){
+      continue;
+    }
+    $skins[] = $skin;
+	}
+}
 
 /**
 * Load API RIOT and check status

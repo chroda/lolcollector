@@ -8,14 +8,11 @@
 		}
 	}
 
-	//pr($profile);
-
 	$profileColor = ($profile->sex === 1) ? 'primary':'info';
 	$profileTextGender = ($profile->sex === 1) ? 'do Invocador':'da Invocadora';
 
 	$collectionChampions = 1;
 	$collectionChampionsSkins = 1;
-	$skins = 1;
 
 	if(rewrite(3)==''){
     echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile->username.'/champions/',true).'"/>';
@@ -85,7 +82,7 @@
 							<img
 								src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
 								alt="<?php echo $champion->id;?>"
-								class="owned"
+								class="_owned"
 								data-toggle="tooltip"
 								data-placement="top"
 								title="<?php echo $champion->name;?>"
@@ -99,20 +96,29 @@
 				<ul id="championsSkinsList">
 					<?php foreach($champions as $champion){
 						// if(!isset($championsColected)){continue;}
-						$skins = [1];
-						// pr($skins);
 						?>
 						<h3><?php echo $champion->name;?></h3>
-						<?php foreach($skins as $skin):?>
+						<?php foreach($champion->skins as $skin):
+							if($skin->num === 0){
+								continue;
+							}
+							$skin_key = $champion->key.'_'.$skin->num;
+							// SKTT1 STILL NOT READY
+							if($skin_key === 'Alistar_9'){continue;}
+							if($skin_key === 'Elise_4'){continue;}
+							if($skin_key === 'Renekton_8'){continue;}
+							if($skin_key === 'Ryze_10'){continue;}
+							if($skin_key === 'Sivir_9'){continue;}
+							?>
 							<li style="margin:10px">
 								<img
-									src="<?php echo str_replace('championKey',$champion->key,$skinloadingUrl);?>"
-									alt="<?php echo $champion->id;?>_0"
+									src="<?php echo str_replace('championKey_0',$skin_key,$skinloadingUrl);?>"
+									alt="<?php echo $skin_key;?>"
 									class="owned"
 									data-toggle="tooltip"
 									data-placement="top"
-									title="<?php echo utf8_decode($champion->name);?>"
-									data-original-title="<?php echo utf8_decode($champion->name);?>
+									title="<?php echo ($skin->name);?>"
+									data-original-title="<?php echo ($skin->name);?>
 								"/>
 							</li>
 						<?php endforeach;?>
