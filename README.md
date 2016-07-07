@@ -63,3 +63,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - [chroda](https://github.com/chroda);
 - [Katanako](https://github.com/Katanako);
 - [Pagelkopf5](https://github.com/Pagelkopf5);
+
+## Questions
+
+[Mail Me]('mailto:chroda@chroda.com.br')
