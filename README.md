@@ -66,4 +66,4 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 
 ## Questions
 
-[Mail Me]('mailto:chroda@chroda.com.br')
+[You Can Make An Issue](https://github.com/chroda/lolcollector/issues)
