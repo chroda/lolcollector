@@ -33,7 +33,6 @@
 				</div>
 			</h3>
 			<br clear="all"/>
-			<br clear="all"/>
 			<ul class="nav nav-pills nav-justified">
 				<li class="<?php echo rewrite(3) === 'champions' ? 'active' : null;?>">
 					<a href="<?php location('user/'.$profile->username.'/champions');?>">Campeões</a>
@@ -73,7 +72,7 @@
 		<?php switch(rewrite(3)):
 			case 'champions':?>
 				<?php if( ($user->isLoggedIn() === true) && (rewrite(2) === $user->getUsername()) ):?>
-					<button id="selectAll" class="btn btn-lolc btn-block"></button>
+					<button id="selectAll" class="btn btn-lolc btn-block">wtf</button>
 					<hr/>
 				<?php endif;?>
 				<ul id="championsList">

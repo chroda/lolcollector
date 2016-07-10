@@ -1,12 +1,12 @@
 (function($){
 	$(function(){
-		var userId 				= $('span#userId'					).text();
-		var CollectionChampions = parseInt($('#collectionChampion'	).text());
-		var CollectionSkins 	= parseInt($('#collectionSkin'		).text());
-		var Champions 			= parseInt($('#champions'			).text());
-		var Skins	 			= parseInt($('#skins'				).text());
-		var btnOwnedAll			= 'Eu tenho todos!';
-		var btnOwnedNothing		= 'Eu não tenho todos.';
+		var userId = $('span#userId'					).text();
+		var CollectionChampions = parseInt($('#collectionChampion').text());
+		var CollectionSkins	= parseInt($('#collectionSkin').text());
+		var Champions = parseInt($('#champions').text());
+		var Skins	= parseInt($('#skins').text());
+		var btnOwnedAll	= 'Eu tenho todos!';
+		var btnOwnedNothing = 'Eu não tenho todos.';
 		function countingChampions(){
 			if(CollectionChampions == Champions){
 				$('#selectAll').text(btnOwnedNothing);
@@ -33,7 +33,7 @@
 					data:{user_id:userId},
 					dataType: "json",
 				});
-				
+
 				cl(CollectionChampions);
 				CollectionChampions	= 0;
 				$('#collectionSkin').text(0);
@@ -52,7 +52,7 @@
 				}).done(function(data){CollectionSkins=data.countingSkins;});
 				$(this).removeClass('owned');
 				$('#collectionChampion').text(--CollectionChampions);
-				
+
 			}else{
 				$.ajax({
 					url: "ajax?action=own-champion",
@@ -65,7 +65,7 @@
 			}
 			countingChampions();
 		});
-		
+
 		$('#championsSkinsList li img').click(function(){
 			var alt = $(this).attr('alt').split('_');
 			if($(this).hasClass('owned')){
@@ -88,6 +88,6 @@
 				$('#collectionSkin').text(++CollectionSkins);
 			}
 		});
-		
+
 	});
 })(jQuery);
