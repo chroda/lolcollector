@@ -17,7 +17,7 @@
 						<a href="https://www.facebook.com/messages/459397237525644" target="_blank">
 							<img src="<?php echo CDN_DIR;?>img/partner.png" />
 						</a>
-						<hr />						
+						<hr />
 						<a href="https://www.facebook.com/NyankoShop" target="_blank">
 							<img src="<?php echo DATA_DIR;?>partners/nyanko.jpg" />
 						</a>
@@ -81,11 +81,13 @@
 				''),
 			}
 		</script>
-		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/functions.js" 							></script>
-		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/events.js" 							></script>
+		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/functions.js"></script>
+		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/events.js"></script>
 		<?php if(@$_SESSION['user']['authenticated']['username'] === rewrite(2)):?>
-			<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/collect.js"						></script>
 		<?php endif;?>
-		<?php if(file_exists(__ROOT__.'cdn/js/'.rewrite(2).'.js')):?><script type="text/javascript" src="<?php echo CDN_DIR.'js/'.rewrite(2).'.js';?>"></script><?php endif;?>
+		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/collect.js"></script>
+		<?php if(file_exists(__ROOT__.'cdn/js/'.rewrite(2).'.js')){ ?>
+			<script type="text/javascript" src="<?php echo CDN_DIR.'js/'.rewrite(2).'.js';?>"></script>
+		<?php };?>
 	</body>
 </html>
