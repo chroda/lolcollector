@@ -71,9 +71,9 @@
 		<script type="text/javascript"  src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
 		<script type='text/javascript'>
 			jQuery.App={
-			    url:		'<?php location(false,false,false);?>',
-			    locale:		'<?php echo $_SESSION['user']['locale'];?>',
-			    platform:	'<?php echo $_SESSION['user']['platform'];?>',
+		    url:		'<?php location(false,false,false);?>',
+		    locale:		'<?php echo $_SESSION['user']['locale'];?>',
+		    platform:	'<?php echo $_SESSION['user']['platform'];?>',
 				graphics:	new Array(
 					<?php foreach(topChampionShuffle(null,true) as $grafic):?>
 						'<?php echo CDN_DIR.'img/nav-random/'.$grafic;?>',
@@ -81,11 +81,12 @@
 				''),
 			}
 		</script>
+		<?php pr($_SESSION);?>
 		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/functions.js"></script>
 		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/events.js"></script>
 		<?php if(@$_SESSION['user']['authenticated']['username'] === rewrite(2)):?>
+			<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/collect.js"></script>
 		<?php endif;?>
-		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/collect.js"></script>
 		<?php if(file_exists(__ROOT__.'cdn/js/'.rewrite(2).'.js')){ ?>
 			<script type="text/javascript" src="<?php echo CDN_DIR.'js/'.rewrite(2).'.js';?>"></script>
 		<?php };?>

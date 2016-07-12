@@ -68,6 +68,7 @@ $_SESSION['pages'] = Array(
 require_once __CONTROLLERS_DIR__.'FakeUser.php';
 if(isset($_SESSION['user']['authenticated']['id'])){
   $user = new User($_SESSION['user']['authenticated']['id']);
+  $_SESSION['user']['authenticated']['username'] = $user->getUsername();
   if(isset($_GET['logout'])){$user->logout();}
 }
 else{
