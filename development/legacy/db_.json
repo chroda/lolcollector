@@ -1,0 +1,37 @@
+{
+  "users" : [
+    {
+      "id" : 1,
+      "name" : "Christian Oliveira",
+      "username" : "chroda",
+      "password": "icratus",
+      "sex": 1,
+      "champions": [132],
+      "champions_skins": [159],
+      "server":"br",
+      "serverFullname" : "Brasil"
+    },
+    {
+      "id" : 2,
+      "name" : "Debora H. Martins",
+      "username" : "kaatanako",
+      "password": "dhm",
+      "sex": 2,
+      "champions": [3],
+      "champions_skins": [1],
+      "server":"br",
+      "serverFullname" : "Brasil"
+    },
+    {
+      "id" : 3,
+      "name" : "Gabriel Pagelkopf",
+      "username" : "root da psb",
+      "password": "page5",
+      "sex": 1,
+      "champions": [],
+      "champions_skins": [],
+      "server":"br",
+      "serverFullname" : "Brasil"
+    }
+  ]
+}

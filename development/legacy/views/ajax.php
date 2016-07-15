@@ -83,7 +83,8 @@ if(isset($_GET['action'])){
       pr($_POST);
       break;
     case 'own-champion':
-      pr($_POST);
+      $user = new User($user_id);
+      $user->addChampion($champion_id);
       break;
     case 'not-own-champion':
       pr($_POST);
