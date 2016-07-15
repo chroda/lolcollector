@@ -56,6 +56,9 @@ final class User{
 		}
 		return false;
 	}
+	public function addChampion($id){
+		pr($this);
+	}
 
 
 }

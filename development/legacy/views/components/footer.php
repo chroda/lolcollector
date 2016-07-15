@@ -71,7 +71,7 @@
 		<script type="text/javascript"  src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script>
 		<script type='text/javascript'>
 			jQuery.App={
-		    url:		'<?php location(false,false,false);?>',
+		    url:			'<?php location(false,false,false);?>',
 		    locale:		'<?php echo $_SESSION['user']['locale'];?>',
 		    platform:	'<?php echo $_SESSION['user']['platform'];?>',
 				graphics:	new Array(
