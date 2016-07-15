@@ -61,15 +61,14 @@ if(isset($_GET['action'])){
 					}
 			}break;//switch($_GET['subject'])
 		case 'own-all-champions':
-			$user = new User($_POST['id_user']);
-			pr($champions);
 			// $_POST['champion_id']
 			break;
 		case 'not-own-all-champions':
 			pr($_POST);
 			break;
 		case 'own-champion':
-			pr($_POST);
+			$user = new User($_POST['user_id']);
+			$user->addChampion($_POST['champion_id']);
 			break;
 		case 'not-own-champion':
 			pr($_POST);
