@@ -91,7 +91,9 @@
 					<?php endforeach;?>
 				</ul>
 				<?php break;
+
 			case 'skins':?>
+				<?php /** / ?>
 				<ul id="championsSkinsList">
 					<?php foreach($champions as $champion){
 						// if(!isset($championsColected)){continue;}
@@ -125,8 +127,11 @@
 						<hr/>
 					<?php }?>
 				</ul>
+				<?php /**/ ?>
+
 				<?php break;
 			case 'stats':?>
+				<?php /** / ?>
 				<div class="jumbotron">
 					<h2>
 						Em Breve uma sessão de estatísticas sobre o invocador.
@@ -135,7 +140,10 @@
 						?>
 					</h2>
 				</div>
+				<?php /**/ ?>
+
 				<?php break;
+
 		endswitch;?>
 	</div>
 </div>
