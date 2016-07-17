@@ -75,8 +75,9 @@ final class User{
 						sort($dbUser->champions);
 						file_put_contents('db.json',json_encode($usersJson));
 						echo 'owned champion';
+					}else{
+						echo 'already owned';
 					}
-					echo 'already owned';
 				}
 			}
 		}else{
@@ -113,5 +114,16 @@ final class User{
 			}
 		}
 	}
+
+	static public function getChampions($id){
+		$usersJson = json_decode(file_get_contents('db.json'));
+		foreach ($usersJson->users as $dbUser){
+			if($dbUser->id == $id){
+				return $dbUser->champions;
+			}
+		}
+	}
+
+
 }
 ?>

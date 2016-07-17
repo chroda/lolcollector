@@ -9,7 +9,7 @@
 		<tr>
 			<th class="text-center"	>#</th>
 			<th class="text-center"	>Ícone</th>
-			<th class="text-left"	>Nome</th>
+			<th class="text-left"		>Nome</th>
 			<th class="text-right"	>Campeões Colecionados</th>
 			<th class="text-right"	>Skin Colecionadas</th>
 			<th class="text-center"	>Servidor</th>
@@ -20,8 +20,8 @@
 		<?php
     $c = 0;
     foreach($summoners as $nr => $summoner):
-			$collectionChampions=$summoner->champions;
-			$collectionSkins=$summoner->champions_skins;
+			$collectionChampions=count($summoner->champions);
+			$collectionSkins=count($summoner->champions_skins);
       ?>
 			<tr>
 				<td class="text-center">

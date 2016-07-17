@@ -8,10 +8,12 @@
 		}
 	}
 
+
+
 	$profileColor = ($profile->sex === 1) ? 'primary':'info';
 	$profileTextGender = ($profile->sex === 1) ? 'do Invocador':'da Invocadora';
 
-	$collectionChampions = 1;
+	$collectionChampions = count(User::getChampions($profile->id));
 	$collectionChampionsSkins = 1;
 
 	if(rewrite(3)==''){
