@@ -71,10 +71,10 @@
 		<hr/>
 		<?php switch(rewrite(3)):
 			case 'champions':?>
-				<?php if( ($user->isLoggedIn() === true) && (rewrite(2) === $user->getUsername()) ):?>
+				<!-- < ?php if( ($user->isLoggedIn() === true) && (rewrite(2) === $user->getUsername()) ):?>
 					<button id="selectAll" class="btn btn-lolc btn-block"></button>
 					<hr/>
-				<?php endif;?>
+				< ?php endif;?> -->
 				<ul id="championsList">
 					<?php foreach($champions as $championName => $champion):
 						$owned = $user->haveChampion($champion->id) ? 'owned' : null; ?>

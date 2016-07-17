@@ -48,6 +48,14 @@ final class User{
 		return $this->db->users[$id]->username;
 	}
 
+	private function getIdByUsername($username){
+		foreach($this->db->users as $user) {
+			if($user->username === $username){
+				return $user->id;
+			}
+		}
+	}
+
 	public function loadByUsername($username){
 		foreach($this->db->users as $id => $user) {
 			if($user->username === $username){
@@ -56,23 +64,48 @@ final class User{
 		}
 		return false;
 	}
+
 	public function addChampion($id){
-		$usersJson = json_decode(file_get_contents('db.json'));
-		foreach ($usersJson->users as $dbUser){
-			if($dbUser->id == $_SESSION['user']['authenticated']['id']){
-				if(!in_array($id,$dbUser->champions)){
-					array_push($dbUser->champions,(int) $id);
-					sort($dbUser->champions);
+		if(!empty($_SESSION['user']['authenticated']['id'])){
+			$usersJson = json_decode(file_get_contents('db.json'));
+			foreach ($usersJson->users as $dbUser){
+				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					if(!in_array($id,$dbUser->champions)){
+						array_push($dbUser->champions,(int) $id);
+						sort($dbUser->champions);
+						file_put_contents('db.json',json_encode($usersJson));
+						echo 'owned champion';
+					}
+					echo 'already owned';
 				}
-				file_put_contents('db.json',json_encode($usersJson));
 			}
+		}else{
+			echo 'not logged';
+		}
+	}
+
+	public function removeChampion($id){
+		if(!empty($_SESSION['user']['authenticated']['id'])){
+			$usersJson = json_decode(file_get_contents('db.json'));
+			foreach ($usersJson->users as $dbUser){
+				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					if(in_array($id,$dbUser->champions)){
+						unset($dbUser->champions[array_search((int)$id,$dbUser->champions)]);
+						sort($dbUser->champions);
+						file_put_contents('db.json',json_encode($usersJson));
+						echo 'remove owned champion';
+					}
+				}
+			}
+		}else{
+			echo 'not logged';
 		}
 	}
 
 	public function haveChampion($id){
 		$usersJson = json_decode(file_get_contents('db.json'));
 		foreach ($usersJson->users as $dbUser){
-			if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+			if($dbUser->id == $this->getIdByUsername(rewrite(2))){
 				if(in_array($id,$dbUser->champions)){
 					return true;
 				}

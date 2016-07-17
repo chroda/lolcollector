@@ -77,6 +77,9 @@ if(isset($_GET['action'])){
     case 'own-all-champions':
       $user = new User($id_user);
       pr($champions);
+      foreach ($champions as $champion) {
+        # code...
+      }
       // $champion_id
       break;
     case 'not-own-all-champions':
@@ -87,7 +90,8 @@ if(isset($_GET['action'])){
       $user->addChampion($champion_id);
       break;
     case 'not-own-champion':
-      pr($_POST);
+      $user = new User($user_id);
+      $user->removeChampion($champion_id);
       break;
     case 'own-skinchampion':
       // $_POST['user_id']
