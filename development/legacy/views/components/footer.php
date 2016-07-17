@@ -81,7 +81,6 @@
 				''),
 			}
 		</script>
-		<?php pr($_SESSION);?>
 		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/functions.js"></script>
 		<script type="text/javascript" src="<?php echo CDN_DIR; ?>js/events.js"></script>
 		<?php if(@$_SESSION['user']['authenticated']['username'] === rewrite(2)):?>

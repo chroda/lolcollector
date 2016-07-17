@@ -72,16 +72,17 @@
 		<?php switch(rewrite(3)):
 			case 'champions':?>
 				<?php if( ($user->isLoggedIn() === true) && (rewrite(2) === $user->getUsername()) ):?>
-					<button id="selectAll" class="btn btn-lolc btn-block">wtf</button>
+					<button id="selectAll" class="btn btn-lolc btn-block"></button>
 					<hr/>
 				<?php endif;?>
 				<ul id="championsList">
-					<?php foreach($champions as $championName => $champion): ?>
+					<?php foreach($champions as $championName => $champion):
+						$owned = $user->haveChampion($champion->id) ? 'owned' : null; ?>
 						<li style="margin:10px">
 							<img
 								src="<?php echo str_replace('championKey',$champion->key,$portraitUrl);?>"
 								alt="<?php echo $champion->id;?>"
-								class="_owned"
+								class="<?php echo $owned;?>"
 								data-toggle="tooltip"
 								data-placement="top"
 								title="<?php echo $champion->name;?>"

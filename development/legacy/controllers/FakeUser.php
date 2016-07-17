@@ -64,8 +64,19 @@ final class User{
 					array_push($dbUser->champions,(int) $id);
 					sort($dbUser->champions);
 				}
-				// pr(json_encode($usersJson));
 				file_put_contents('db.json',json_encode($usersJson));
+			}
+		}
+	}
+
+	public function haveChampion($id){
+		$usersJson = json_decode(file_get_contents('db.json'));
+		foreach ($usersJson->users as $dbUser){
+			if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+				if(in_array($id,$dbUser->champions)){
+					return true;
+				}
+				return false;
 			}
 		}
 	}
