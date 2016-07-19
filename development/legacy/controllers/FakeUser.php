@@ -74,9 +74,9 @@ final class User{
 						array_push($dbUser->champions,(int) $id);
 						sort($dbUser->champions);
 						file_put_contents('db.json',json_encode($usersJson));
-						echo 'owned champion';
+						echo 'owned_champion:' . $id . "\n";
 					}else{
-						echo 'already owned';
+						echo 'already_owned';
 					}
 				}
 			}
@@ -96,6 +96,20 @@ final class User{
 						file_put_contents('db.json',json_encode($usersJson));
 						echo 'remove owned champion';
 					}
+				}
+			}
+		}else{
+			echo 'not logged';
+		}
+	}
+
+	public function removeAllChampion(){
+		if(!empty($_SESSION['user']['authenticated']['id'])){
+			$usersJson = json_decode(file_get_contents('db.json'));
+			foreach ($usersJson->users as $dbUser){
+				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					$dbUser->champions = [];
+					file_put_contents('db.json',json_encode($usersJson));
 				}
 			}
 		}else{

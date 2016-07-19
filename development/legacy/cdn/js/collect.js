@@ -33,8 +33,6 @@
 					data:{user_id:userId},
 					dataType: "json",
 				});
-
-				cl(CollectionChampions);
 				CollectionChampions	= 0;
 				$('#collectionSkin').text(0);
 				$('#championsList li img').removeClass('owned');

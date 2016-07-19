@@ -75,15 +75,14 @@ if(isset($_GET['action'])){
       }
       break;//switch($_GET['subject'])
     case 'own-all-champions':
-      $user = new User($id_user);
-      pr($champions);
-      foreach ($champions as $champion) {
-        # code...
+      $user = new User($user_id);
+      foreach ($champions as $champion){
+        $user->addChampion($champion->id);
       }
-      // $champion_id
       break;
     case 'not-own-all-champions':
-      pr($_POST);
+      $user = new User($user_id);
+      $user->removeAllChampion();
       break;
     case 'own-champion':
       $user = new User($user_id);
