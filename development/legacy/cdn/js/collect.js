@@ -70,7 +70,7 @@
 				$.ajax({
 					url: "ajax?action=not-own-skinchampion",
 					type: "POST",
-					data:{user_id:userId,champion_id:alt[0],number:alt[1]},
+					data:{user_id:userId,skin_id:alt[0]},
 					dataType: "json",
 				});
 				$(this).removeClass('owned');
@@ -79,7 +79,7 @@
 				$.ajax({
 					url: "ajax?action=own-skinchampion",
 					type: "POST",
-					data:{user_id:userId,champion_id:alt[0],number:alt[1]},
+					data:{user_id:userId,skin_id:alt[0]},
 					dataType: "json",
 				});
 				$(this).addClass('owned');

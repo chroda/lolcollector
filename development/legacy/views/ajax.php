@@ -93,13 +93,12 @@ if(isset($_GET['action'])){
       $user->removeChampion($champion_id);
       break;
     case 'own-skinchampion':
-      // $_POST['user_id']
-      // $_POST['champion_id']
-      // $_POST['number']
-      pr($_POST);
+      $user = new User($user_id);
+      $user->addChampionSkin($skin_id);
       break;
     case 'not-own-skinchampion':
-      pr($_POST);
+      $user = new User($user_id);
+      $user->removeChampionSkin($skin_id);
       break;
     case 'mail':
       extract($_POST);

@@ -65,6 +65,20 @@ final class User{
 		return false;
 	}
 
+	public function removeAllChampion(){
+		if(!empty($_SESSION['user']['authenticated']['id'])){
+			$usersJson = json_decode(file_get_contents('db.json'));
+			foreach ($usersJson->users as $dbUser){
+				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					$dbUser->champions = [];
+					file_put_contents('db.json',json_encode($usersJson));
+				}
+			}
+		}else{
+			echo 'not logged';
+		}
+	}
+
 	public function addChampion($id){
 		if(!empty($_SESSION['user']['authenticated']['id'])){
 			$usersJson = json_decode(file_get_contents('db.json'));
@@ -103,13 +117,37 @@ final class User{
 		}
 	}
 
-	public function removeAllChampion(){
+	public function addChampionSkin($id){
 		if(!empty($_SESSION['user']['authenticated']['id'])){
 			$usersJson = json_decode(file_get_contents('db.json'));
 			foreach ($usersJson->users as $dbUser){
 				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
-					$dbUser->champions = [];
-					file_put_contents('db.json',json_encode($usersJson));
+					if(!in_array($id,$dbUser->champions_skins)){
+						array_push($dbUser->champions_skins,(int) $id);
+						sort($dbUser->champions_skins);
+						file_put_contents('db.json',json_encode($usersJson));
+						echo 'owned_champions_skins:' . $id . "\n";
+					}else{
+						echo 'already_owned';
+					}
+				}
+			}
+		}else{
+			echo 'not logged';
+		}
+	}
+
+	public function removeChampionSkin($id){
+		if(!empty($_SESSION['user']['authenticated']['id'])){
+			$usersJson = json_decode(file_get_contents('db.json'));
+			foreach ($usersJson->users as $dbUser){
+				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					if(in_array($id,$dbUser->champions_skins)){
+						unset($dbUser->champions_skins[array_search((int)$id,$dbUser->champions_skins)]);
+						sort($dbUser->champions_skins);
+						file_put_contents('db.json',json_encode($usersJson));
+						echo 'remove owned champion skin';
+					}
 				}
 			}
 		}else{
@@ -129,6 +167,18 @@ final class User{
 		}
 	}
 
+	public function haveChampionSkin($id){
+		$usersJson = json_decode(file_get_contents('db.json'));
+		foreach ($usersJson->users as $dbUser){
+			if($dbUser->id == $this->getIdByUsername(rewrite(2))){
+				if(in_array($id,$dbUser->champions_skins)){
+					return true;
+				}
+				return false;
+			}
+		}
+	}
+
 	static public function getChampions($id){
 		$usersJson = json_decode(file_get_contents('db.json'));
 		foreach ($usersJson->users as $dbUser){
@@ -138,6 +188,14 @@ final class User{
 		}
 	}
 
+	static public function getChampionsSkins($id){
+		$usersJson = json_decode(file_get_contents('db.json'));
+		foreach ($usersJson->users as $dbUser){
+			if($dbUser->id == $id){
+				return $dbUser->champions_skins;
+			}
+		}
+	}
 
 }
 ?>

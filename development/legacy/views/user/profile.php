@@ -14,7 +14,7 @@
 	$profileTextGender = ($profile->sex === 1) ? 'do Invocador':'da Invocadora';
 
 	$collectionChampions = count(User::getChampions($profile->id));
-	$collectionChampionsSkins = 1;
+	$collectionChampionsSkins = count(User::getChampionsSkins($profile->id));
 
 	if(rewrite(3)==''){
     echo '<META http-equiv="refresh" content="0;URL='.location('user/'.$profile->username.'/champions/',true).'"/>';
@@ -96,29 +96,31 @@
 				<?php break;
 
 			case 'skins':?>
-				<?php /** / ?>
 				<ul id="championsSkinsList">
 					<?php foreach($champions as $champion){
-						// if(!isset($championsColected)){continue;}
-						?>
+						if(!$user->haveChampion($champion->id)){
+							continue;
+						}?>
 						<h3><?php echo $champion->name;?></h3>
 						<?php foreach($champion->skins as $skin):
 							if($skin->num === 0){
 								continue;
 							}
 							$skin_key = $champion->key.'_'.$skin->num;
+
 							// SKTT1 STILL NOT READY
 							if($skin_key === 'Alistar_9'){continue;}
 							if($skin_key === 'Elise_4'){continue;}
 							if($skin_key === 'Renekton_8'){continue;}
 							if($skin_key === 'Ryze_10'){continue;}
 							if($skin_key === 'Sivir_9'){continue;}
-							?>
+
+							$owned = $user->haveChampionSkin($skin->id) ? 'owned' : null; ?>
 							<li style="margin:10px">
 								<img
 									src="<?php echo str_replace('championKey_0',$skin_key,$skinloadingUrl);?>"
-									alt="<?php echo $skin_key;?>"
-									class="owned"
+									alt="<?php echo $skin->id;?>"
+									class="<?php echo $owned;?>"
 									data-toggle="tooltip"
 									data-placement="top"
 									title="<?php echo ($skin->name);?>"
@@ -130,23 +132,15 @@
 						<hr/>
 					<?php }?>
 				</ul>
-				<?php /**/ ?>
-
 				<?php break;
 			case 'stats':?>
-				<?php /** / ?>
 				<div class="jumbotron">
 					<h2>
 						Em Breve uma sessão de estatísticas sobre o invocador.
-						<?php
-							pr($profile);
-						?>
+						(mentira, não tem!)
 					</h2>
 				</div>
-				<?php /**/ ?>
-
 				<?php break;
-
 		endswitch;?>
 	</div>
 </div>
