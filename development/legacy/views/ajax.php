@@ -17,19 +17,29 @@ if(isset($_GET['action'])){
           $signal=0;
           $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f';
           $summonerName = str_replace('__name__',strip_tags($_POST['name']),$summonerNameUrl);
-          $summonerName = json_decode(@file_get_contents($summonerName));
-          if(!empty($summoner)){
+          $summoner = json_decode(@file_get_contents($summonerName));
+          if(empty($summoner)){
+            // não existe no server;
+            $signal=3;
+          }
+          else{
             if($summoner=='503'){
               $signal=503;
             }
             else{
-              $_response['signup']['username'] = removeAccents(key($summoner));
+              // usuario pode ser cadastrado;
+              $signal=1;
+              $summoner = removeAccents(key($summoner));
+              // pesquisa pelo usuario no db
+              foreach ($db->users as $user) {
+                if($user->username === $summoner){
+                  // já existe no banco de dados;
+                  $signal=2;
+                }
+              }
+              $_response['signup']['username'] = $summoner;
             }
           }
-          else{$signal=3;}
-          //
-          pr($_response['signup']['username']);
-          pr($_response['signup']['summoner']);
           $_response['signup']['summoner'] = $signal;
         break;
         case 'validate':
@@ -86,6 +96,8 @@ if(isset($_GET['action'])){
           }
         }
       break;//switch($_GET['subject'])
+
+      
     case 'own-all-champions':
       $user = new User($user_id);
       foreach ($champions as $champion){
