@@ -12,7 +12,7 @@ final class User{
 	}
 
 	public function authenticate($username,$password){
-		foreach($this->db->users as $id => $user) {
+		foreach($this->db->users as $user) {
 			if($user->username === $username && $user->password === $password){
 				$_SESSION['user']['authenticated']['id'] = $user->id;
 				return true;

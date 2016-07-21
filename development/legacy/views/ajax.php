@@ -41,25 +41,34 @@ if(isset($_GET['action'])){
             }
           }
           $_response['signup']['summoner'] = $signal;
-        break;
+          break;
         case 'validate':
           $name = strip_tags($_POST['name']);
+          $username = $name;
           $server = $_POST['server'];
           $password = strip_tags($_POST['password']);
           $passwordConfirm = strip_tags($_POST['passwordConfirm']);
           $email = $_POST['email'];
           $emailConfirm	= $_POST['emailConfirm'];
           $sex = $_POST['sex'];
-          $summoner	=json_decode($api->getSummonerByName($name));
+          $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f';
+          $summonerName = str_replace('__name__',strip_tags($_POST['name']),$summonerNameUrl);
+          $summoner = json_decode(@file_get_contents($summonerName));
           if(!empty($summoner)){
             if($summoner=='503'){
               $_response['signup']['validate']['failed']['api'] ='API RIOT Indisponível.';
             }
             else{
-              // $mysql->Select('user',array('username'=>removeAccents(key($summoner))));
-              if($mysql->iRecords==0){
+              $summonerExists = false;
+              foreach ($db->users as $user) {
+                if($user->username === removeAccents(key($summoner))){
+                  $summonerExists = true;
+                }
+              }
+              if($summonerExists === false){
                 $username=(key($summoner));
-              }else{
+              }
+              else{
                 $_response['signup']['validate']['failed']['username'	] = 'Usuário já existe.';
               }
             }
@@ -80,24 +89,33 @@ if(isset($_GET['action'])){
             $_response['signup']['validate']['failed']['email'] = 'Emails não conferem.';
           }
           if(!isset($_response['signup']['validate']['failed'])){
+            $maxId = 0;
+            foreach ($db->users as $user) {
+              $maxId = $user->id > $maxId ? $user->id: $maxId;
+            }
             $dataset = array(
+              'id' => ++$maxId,
               'riot_id' => $summoner->$username->id,
               'riot_level'	=>$summoner->$username->summonerLevel,
               'name' => $summoner->$username->name,
               'username' => removeAccents($username),
-              'password' => md5($password),
+              'password' => ($password),
               'server' => $server,
+              'serverFullname' => 'Brasil',
               'email' => $email,
-              'sex' => $sex,
+              'sex' => (int)$sex,
+              "champions" => [],
+              "champions_skins" => [],
             );
-            $mysql->Insert($dataset,'user');
-            $user->authenticate(removeAccents($username),$password);
+            $getDb = json_decode(file_get_contents("db.json"));
+            array_push($getDb->users, $dataset);
+            file_put_contents('db.json',json_encode($getDb));
+            $_SESSION['user']['authenticated']['id'] = $dataset['id'];
             $_response['signup']['validate']['success'] = removeAccents($username);
           }
-        }
-      break;//switch($_GET['subject'])
-
-      
+          break;//switch($_GET['subject'])
+      }
+      break;//signup
     case 'own-all-champions':
       $user = new User($user_id);
       foreach ($champions as $champion){
