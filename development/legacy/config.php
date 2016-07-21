@@ -65,7 +65,7 @@ case 'www.lolcollector.com.br':
 	define('MYSQL_PASS','xQ30CuUG5I');
 	define('MYSQL_NAME','u657450779_lolc');
 	define( '__ENV__', 'prod' );
-	define( '__PATH__', '/' );
+	define( '__PATH__', '/legacy/' );
 	break;
 
 /**
