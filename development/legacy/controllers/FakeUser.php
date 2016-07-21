@@ -48,7 +48,7 @@ final class User{
 		return $this->db->users[$id]->username;
 	}
 
-	private function getIdByUsername($username){
+	public function getIdByUsername($username){
 		foreach($this->db->users as $user) {
 			if($user->username === $username){
 				return $user->id;

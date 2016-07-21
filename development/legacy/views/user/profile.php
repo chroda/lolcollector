@@ -8,8 +8,6 @@
 		}
 	}
 
-
-
 	$profileColor = ($profile->sex === 1) ? 'primary':'info';
 	$profileTextGender = ($profile->sex === 1) ? 'do Invocador':'da Invocadora';
 
