@@ -2,10 +2,26 @@
 
 A League Of Legends -MOBA game- collection website.
 
-## Tutos
+## Legacy Project
 
-- I've being looking a bunch of tutorials, with time I will put the list here.
-- [Tuto-Redux](https://github.com/happypoulp/redux-tutorial/)
+We rebuild the old project to our designer @katanako use it.
+All data its  a fake data, but it works!
+If the real project still under construction and you want make a test of our idea, feel free to use the legacy.
+http://lolcollector.com.br/legacy
+
+## Management
+
+We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project management.
+
+
+[badge_todo]:https://badge.waffle.io/chroda/lolcollector.svg?label=todo&title=To-Do "Issues To Do"
+[badge_doing]:https://badge.waffle.io/chroda/lolcollector.svg?label=doing&title=Doing "Issues Doing"
+
+![[alt text](http://waffle.io/chroda/lolcollector)][badge_todo]
+![[alt text](http://waffle.io/chroda/lolcollector)][badge_doing]
+
+[![Throughput Graph](https://graphs.waffle.io/chroda/lolcollector/throughput.svg)](https://waffle.io/chroda/lolcollector/metrics/throughput)
+
 
 ## Production Goals
 
@@ -54,3 +70,7 @@ A League Of Legends -MOBA game- collection website.
 - [chroda](https://github.com/chroda);
 - [Katanako](https://github.com/Katanako);
 - [Pagelkopf5](https://github.com/Pagelkopf5);
+
+## Questions
+
+[You Can Make An Issue](https://github.com/chroda/lolcollector/issues)

@@ -68,18 +68,28 @@ $_SESSION['pages'] = Array(
 require_once __CONTROLLERS_DIR__.'FakeUser.php';
 if(isset($_SESSION['user']['authenticated']['id'])){
   $user = new User($_SESSION['user']['authenticated']['id']);
+  $_SESSION['user']['authenticated']['username'] = $user->getUsername();
   if(isset($_GET['logout'])){$user->logout();}
 }
 else{
-  // $user->authenticate('chroda','icratus');
   $user = new User;
 }
 
 /**
 * Load data
 */
-$champions = $db->champions;
 $summoners = $db->users;
+$champions = $db->champions;
+$skins = [];
+
+foreach ($champions as $champion) {
+	foreach($champion->skins as $skin) {
+    if($skin->num === 0){
+      continue;
+    }
+    $skins[] = $skin;
+	}
+}
 
 /**
 * Load API RIOT and check status
@@ -126,15 +136,12 @@ if(rewrite(2)=='signup'){
 }
 
 if(rewrite(1)=='user' && (rewrite(2)!=='') && (rewrite(2)!=='signup')){
-  $title_user_id = 1;
-  $title_user_champions = 23;
-  $title_user_skins = 38;
+  $title_user_id = $user->getIdByUsername(rewrite(2));
+  $title_user_champions = count(User::getChampions($title_user_id));
+  $title_user_skins = count(User::getChampionsSkins($title_user_id));
   $seo_title = strtoupper(rewrite(2)).' - C: '.$title_user_champions.' - S: '.$title_user_skins;
   $seo_description = $seo_title;
 }
 $_SESSION['seo']['title'] = $seo_title.__TITLE_SEP__.$_SESSION['seo']['title'];
 $_SESSION['seo']['page'] = $seo_title;
 isset($seo_description) ? $_SESSION['seo']['description'] = $seo_description : null ;
-
-// pr($_SESSION);
-// pr($user);
