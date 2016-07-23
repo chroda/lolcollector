@@ -104,12 +104,14 @@ final class User{
 			$usersJson = json_decode(file_get_contents('db.json'));
 			foreach ($usersJson->users as $dbUser){
 				if($dbUser->id == $_SESSION['user']['authenticated']['id']){
+					pr($db->champions);
 					if(in_array($id,$dbUser->champions)){
 						unset($dbUser->champions[array_search((int)$id,$dbUser->champions)]);
 						sort($dbUser->champions);
 						file_put_contents('db.json',json_encode($usersJson));
 						echo 'remove owned champion';
 					}
+					die;
 				}
 			}
 		}else{
