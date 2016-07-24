@@ -124,7 +124,9 @@ if(isset($_GET['action'])){
       break;
     case 'not-own-all-champions':
       $user = new User($user_id);
-      $user->removeAllChampion();
+      if($user->removeAllChampion()){
+        $user->removeAllChampionSkin();
+      }
       break;
     case 'own-champion':
       $user = new User($user_id);
@@ -133,6 +135,14 @@ if(isset($_GET['action'])){
     case 'not-own-champion':
       $user = new User($user_id);
       $user->removeChampion($champion_id);
+      foreach ($champions as $champion){
+        if($champion->id == $champion_id){
+          foreach ($champion->skins as $skin){
+            $user->removeChampionSkin($skin->id);
+          }
+          die;
+        }
+      }
       break;
     case 'own-skinchampion':
       $user = new User($user_id);
