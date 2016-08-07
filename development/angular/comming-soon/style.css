@@ -44,11 +44,8 @@ body {
   font-weight: lighter;
 }
 
-.fa fa-facebook {
-  font-size: 30px;
-}
-
-.fa fa-facebook {
+.fa.fa-facebook {
+  font-size: 130px;
   text-align: center;
 }
 
