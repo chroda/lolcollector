@@ -2,6 +2,11 @@
 
 A League Of Legends -MOBA game- collection website.
 
+## Comming Soon Page
+
+We are building a very clean and bealty page to announce our product.
+http://lolcollector.com.br
+
 ## Legacy Project
 
 We rebuild the old project to our designer @katanako use it.
