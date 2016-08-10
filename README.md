@@ -1,4 +1,4 @@
-# LolCollector
+# Lol Collector
 
 A League Of Legends -MOBA game- collection website.
 
