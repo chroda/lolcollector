@@ -27,7 +27,6 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 
 [![Throughput Graph](https://graphs.waffle.io/chroda/lolcollector/throughput.svg)](https://waffle.io/chroda/lolcollector/metrics/throughput)
 
-
 ## Production Goals
 
 - Collected Champions;
