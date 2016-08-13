@@ -93,6 +93,7 @@ $db = new StdClass;
 $db->users = [];
 $db->champions = [];
 
+// users
 foreach ($usersJson->users as $id => $dbUser){
 	$db->users[$dbUser->id] = $dbUser;
 }
