@@ -2,7 +2,7 @@
 
 A League Of Legends -MOBA game- collection website.
 
-## Comming Soon Page
+## Comming-Soon Page
 
 We are building a very clean and bealty page to announce our product.
 http://lolcollector.com.br
