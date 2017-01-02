@@ -1,5 +1,5 @@
 <?php
-	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/6.12.1/img/champion/championKey.png';
+	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/championKey.png';
 	$skinloadingUrl = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/championKey_0.jpg';
 
 	foreach($db->users as $profileId => $profileUser) {

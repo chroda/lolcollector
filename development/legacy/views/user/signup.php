@@ -40,7 +40,7 @@
 				<div class="form-group has-success">
 					<label 	class="col-lg-3 	control-label" >Nome de Usuário</label>
 					<div class="col-lg-8 help-block">
-						<span class="text-primary lead" id="username">lolcollector.com.br/<strong class="text-info">nick</strong></span>
+						<span class="text-primary lead" id="username">lolcollector.chroda.com.br/<strong class="text-info">nick</strong></span>
 					</div>
 				</div>
 				<div class="form-group">

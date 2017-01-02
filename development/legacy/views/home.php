@@ -4,7 +4,7 @@
 		<h2>
 			Sua página de coleção esta ativa em
 			<a href="<?php echo location($user->getUsername());?>" class="btn btn-lolc btn-lg">
-				lolcollector.com.br/<?php echo $user->getUsername();?>
+				lolcollector.chroda.com.br/<?php echo $user->getUsername();?>
 			</a>
 		</h2>
 	<?php else:?>

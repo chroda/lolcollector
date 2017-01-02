@@ -52,20 +52,22 @@ setlocale(LC_ALL, __LOCALE__ . ".UTF-8");
 ini_set('session.name',__SESSION_NAME__);
 ini_set('session.cookie_lifetime',__SESSION_TIMEOUT__);
 ini_set('session.use_trans_sid',true);
+
 switch(__DNS__):
 /**
  * Production.
  */
-case 	 'lolcollector.com':
+case 		 'lolcollector.com':
 case 'www.lolcollector.com':
-case 	 'lolcollector.com.br':
+case 		 'lolcollector.com.br':
 case 'www.lolcollector.com.br':
+case 'lolcollector.chroda.com.br':
 	define('MYSQL_HOST','mysql.hostinger.com.br');
 	define('MYSQL_USER','u657450779_lolc');
 	define('MYSQL_PASS','xQ30CuUG5I');
 	define('MYSQL_NAME','u657450779_lolc');
 	define( '__ENV__', 'prod' );
-	define( '__PATH__', '/legacy/' );
+	define( '__PATH__', '/' );
 	break;
 
 /**

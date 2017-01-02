@@ -72,8 +72,8 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ## Colaborators
 
 - [chroda](https://github.com/chroda);
-- [Katanako](https://github.com/Katanako);
-- [Pagelkopf5](https://github.com/Pagelkopf5);
+- [Katanako](https://github.com/Katanako); - Former
+- [Pagelkopf5](https://github.com/Pagelkopf5); - Former
 
 ## Questions
 
