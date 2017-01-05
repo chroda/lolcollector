@@ -2,17 +2,21 @@
 
 A League Of Legends -MOBA game- collection website.
 
+## Current Stage
+
+Buiding Comming-Soon Page.
+
 ## Comming-Soon Page
 
 We are building a very clean and bealty page to announce our product.
-http://lolcollector.com.br
+http://lolcollector.chroda.com.br
 
 ## Legacy Project
 
 We rebuild the old project to our designer @katanako use it.
 All data its  a fake data, but it works!
 If the real project still under construction and you want make a test of our idea, feel free to use the legacy.
-http://lolcollector.com.br/legacy
+http://lolcollector.chroda.com.br/legacy
 
 ## Management
 
@@ -50,7 +54,6 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - Stats
 - Summoner
 - Team
-
 
 ## Plataform Goals
 
