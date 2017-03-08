@@ -4,9 +4,7 @@ A League Of Legends -MOBA game- collection website.
 
 ### Disclaimer
 
-The application was builded when the envolved devs have time,
-so along the years, this project stopped a few times.
-
+The application was builded when the envolved devs had time, so along the years, this project stopped a few times on development.
 But we want to develop a great application to best use of ours summoners.
 
 ## Since
