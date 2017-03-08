@@ -4,6 +4,7 @@ A League Of Legends -MOBA game- collection website.
 
 ## Current Stage
 
+STOPPED!
 Buiding Comming-Soon Page.
 
 ## Comming-Soon Page
