@@ -2,10 +2,20 @@
 
 A League Of Legends -MOBA game- collection website.
 
+### Disclaimer
+
+The application was builded when the envolved devs have time,
+so along the years, this project stopped a few times.
+
+But we want to develop a great application to best use of ours summoners.
+
+## Since
+
+- This application was idealized in 2014, created and mainteined here in GitHub.
+
 ## Current Stage
 
-STOPPED!
-Buiding Comming-Soon Page.
+- Buiding Comming-Soon Page.
 
 ## Comming-Soon Page
 
@@ -68,7 +78,9 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - React-Native;
 - Redux;
 - Angular;
+- Angular2;
 - Ionic;
+- Ionic2;
 - CodeIgniter;
 - Lavarel;
 - Firebase;
@@ -76,6 +88,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ## Colaborators
 
 - [chroda](https://github.com/chroda);
+- [Urtred](https://github.com/urtred);
 - [Katanako](https://github.com/Katanako); - Former
 - [Pagelkopf5](https://github.com/Pagelkopf5); - Former
 
