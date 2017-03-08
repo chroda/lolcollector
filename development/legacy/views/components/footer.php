@@ -11,6 +11,7 @@
 					<div class="panel-footer"><h6 class="panel-title text-center"><small>FACEBOOK</small></h6></div>
 				</div>
 				<br />
+				<!--  - - >
 				<div class="panel panel-default">
 					<div class="panel-heading"><h6 class="panel-title text-center"><small>PARCEIROS</small></h6></div>
 					<div class="panel-body">
@@ -25,6 +26,7 @@
 					<div class="panel-footer"><h6 class="panel-title text-center"><small>PARCEIROS</small></h6></div>
 				</div>
 				<br />
+				<!--  -->
 				<div class="panel panel-default">
 					<div class="panel-heading"><h6 class="panel-title text-center"><small>PUBLICIDADE</small></h6></div>
 					<div class="panel-body">
