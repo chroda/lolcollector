@@ -18,7 +18,7 @@ But we want to develop a great application to best use of ours summoners.
 ## Comming-Soon Page
 
 We are building a very clean and bealty page to announce our product.
-http://lolcollector.chroda.com.br
+[Check the project right now!](http://lolcollector.chroda.com.br)
 
 ## Legacy Project
 
