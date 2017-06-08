@@ -86,7 +86,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ## Colaborators
 
 - [chroda](https://github.com/chroda);
-- [AngieAbadeer](https://github.com/angieabadeer);
+- [AngieAbadeer](https://github.com/angieabadeer); - Former
 - [Urtred](https://github.com/urtred); - Former
 - [Tavaresrafa](https://github.com/tavaresrafa); - Former
 - [Katanako](https://github.com/Katanako); - Former
