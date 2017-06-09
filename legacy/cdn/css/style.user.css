@@ -1,0 +1,45 @@
+span#userId{display:none;}
+ul#championsList,
+ul#championsSkinsList{
+	list-style:none;
+	padding:5px;
+	width: auto;
+}
+ul#championsList 		li,
+ul#championsSkinsList 	li{
+	float:left;
+	margin:0px;
+}
+ul#championsList 		li img,
+ul#championsSkinsList 	li img{
+	width: 100px;
+	padding: 10px;
+	-webkit-filter: grayscale(100%);
+	cursor:pointer;
+}
+ul#championsSkinsList 	li img{
+	width:130px;
+}
+
+ul#championsList 		li img.owned,
+ul#championsSkinsList 	li img.owned{
+	-webkit-filter: grayscale(0%);
+  	filter: grayscale(0%);
+	background-image: url('../img/seal.png');
+	background-repeat: no-repeat;	
+}
+ul#championsSkinsList 	li img.owned{
+	background-image: url('../img/seal_skinchampion.png');
+}
+
+div.panel-heading h3.panel-title{
+	text-transform: uppercase;
+}
+.nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus{
+	background-color: #B08B1A;
+	border-color: #B08B1A;
+}
+.nav-pills>li.active>a:hover{
+	background-color: #956e23;
+	border-color: #956e23;
+}

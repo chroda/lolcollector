@@ -1,0 +1,21 @@
+/**
+ * @AUTHOR		Christian Marcell de Oliveira (chroda) <chroda@chroda.com.br>
+ * @COPYRIGHT	CHRODA 2014
+ * @PACKAGE		CHRODA LolC
+ * @SINCE     July 2013
+ * @VERSION		0.1
+ */
+
+/* TEAM */
+
+Programmer/Developer:	Christian Marcell de Oliveira.
+Email               :	chroda@chroda.com.br
+Twitter             :	@_chroda
+Location            :	Balneario Camboriu, SC, Brazil.
+
+/* SITE */
+
+Last update         : 2014/02/11.
+Standards           : XHTML, CSS2, CSS3.
+Components          : jQuery.
+Softwares           : Atom.

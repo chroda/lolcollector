@@ -1,0 +1,185 @@
+{
+	"variables": [],
+	"info": {
+		"name": "LoLCollector",
+		"_postman_id": "fc46c175-a0ac-793f-50e4-db0259bda33a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CHAMPION-MASTERY-V3",
+			"description": "",
+			"item": [
+				{
+					"name": "champion-masteries/by-summoner/{summonerId}",
+					"request": {
+						"url": {
+							"raw": "https://br1.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/1765464?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f",
+							"protocol": "https",
+							"auth": {},
+							"host": [
+								"br1",
+								"api",
+								"riotgames",
+								"com"
+							],
+							"path": [
+								"lol",
+								"champion-mastery",
+								"v3",
+								"champion-masteries",
+								"by-summoner",
+								"1765464"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CHAMPION-V1.2",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "CHAMPION-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "CHAMPIONMASTERY",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "CURRENT-GAME-V1.0",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "FEATURED-GAMES-V1.0",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "GAME-V1.3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LEAGUE-V2.5",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LEAGUE-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LOL-STATIC-DATA-V1.2",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LOL-STATIC-DATA-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LOL-STATUS-V1.0",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "LOL-STATUS-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "MASTERIES-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "MATCH-V2.2",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "MATCH-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "MATCHLIST-V2.2",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "RUNES-MASTERIES-V1.4",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "RUNES-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "SPECTATOR-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "STATS-V1.3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "SUMMONER-V1.4",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "SUMMONER-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "TOURNAMENT-PROVIDER-V1",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "TOURNAMENT-STUB-V1",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "TOURNAMENT-STUB-V3",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "TOURNAMENT-V",
+			"description": "",
+			"item": []
+		}
+	]
+}

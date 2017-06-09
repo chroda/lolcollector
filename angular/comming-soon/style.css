@@ -1,0 +1,61 @@
+body {
+  background-color: #EAEFF9;
+}
+
+.header {
+  background-color: #951732;
+  box-sizing: border-box;
+  width: 200px;
+  height: 150px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #EAEFF9;
+  font-size: 15px;
+  width: 15%;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.header h1 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main {
+  color: #6A1024;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.about {
+  color: #6A1024;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about h3 {
+  width: 30%;
+  display: inline-block;
+  padding: 0 1.5%;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.fa.fa-facebook {
+  font-size: 130px;
+  text-align: center;
+}
+
+footer {
+  background-color: #951732;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #EAEFF9;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
