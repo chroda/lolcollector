@@ -25,7 +25,7 @@ We are building a very clean and bealty page to announce our product.
 We rebuild the old project to our designer @katanako use it.
 All data its  a fake data, but it works!
 If the real project still under construction and you want make a test of our idea, feel free to use the legacy.
-http://lolcollector.chroda.com.br/legacy
+http://lolcollector.chroda.com.br
 
 ## Management
 
