@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Slim 3</title>
-        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-        <style>
-            body {
-                margin: 50px 0 0 0;
-                padding: 0;
-                width: 100%;
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                text-align: center;
-                color: #aaa;
-                font-size: 18px;
-            }
-
-            h1 {
-                color: #719e40;
-                letter-spacing: -3px;
-                font-family: 'Lato', sans-serif;
-                font-size: 100px;
-                font-weight: 200;
-                margin-bottom: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Slim</h1>
-        <div>a microframework for PHP</div>
-
-        <?php if (isset($name)) : ?>
-            <h2>Hello <?= htmlspecialchars($name); ?>!</h2>
-        <?php else: ?>
-            <p>Try <a href="http://www.slimframework.com">SlimFramework</a>
-        <?php endif; ?>
-    </body>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>LoL Collector - Comming Soon </title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="LoL Collector">
+    <meta name="author" content="LampLighter Team">
+    <link rel="shortcut icon" href="#"> <!-- falta o icone-->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="header">
+      <h1> Olá, invocador! </h1>
+    </div>
+    <div class="main">
+      <h2>Estamos preparando o novo site</h2>
+    </div>
+    <div class="about">
+      <h3>Mas segue a gente na fanpage</h3>
+      <i class="fa fa-facebook"></i>
+      <h3>Ou contribua com nosso projeto no Github</h3>
+      <i class="fa fa-github"></i>
+    </div>
+    <div>
+      <footer>
+        <p>
+          <i class="fa fa-code"></i> with <i class="fa fa-heart"></i>
+          by The LampLighter Team
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
