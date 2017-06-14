@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="listaTelefonica">
+  <head>
+    <meta charset="utf-8" />
+    <title>LoL Collector</title>
+  </head>
+  <body>
+    <div class="jumbotron" ng-show="loading">
+      <h5>Carregando, aguarde</h5>
+    </div>
+    <div ng-hide="loading">
+      <div ng-view></div>
+      <div ng-include="'templates/footer.html'"></div>
+    </div>
+  </body>
+</html>
