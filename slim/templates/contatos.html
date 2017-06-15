@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <h3>{{app}}</h3>
+  <!-- - ->
+  <ui-alert title="Ops, aconteceu um problema!" message="error">
+    {{error}}
+  </ui-alert>
+  <ui-accordions>
+    <ui-accordion title="Accordion1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ui-accordion>
+    <ui-accordion title="Accordion2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ui-accordion>
+    <ui-accordion title="Accordion3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ui-accordion>
+    <ui-accordion title="Accordion4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</ui-accordion>
+  </ui-accordions>
+  <!-- -->
+  <br/>
+  <input class="form-control" type="text" ng-model="criterioDeBusca" ng-model-options="{updateOn:'default blur',debounce:{default:500,blur:0}}" placeholder="O que você esta buscando?"/>
+  <table class="table" ng-if="contatos.length > 0">
+    <tr>
+      <th></th>
+      <th>Serial</th>
+      <th><a ng-click="ordenarPor('nome')">Nome</a></th>
+      <th><a ng-click="ordenarPor('telefone')">Telefone</a></th>
+      <th><a ng-click="ordenarPor('operadora.nome')">Operadora</a></th>
+      <th><a ng-click="ordenarPor('operadora.preco')">Preço</a></th>
+      <th><a ng-click="ordenarPor('data')">Data</a></th>
+    </tr>
+    <tr ng-class="{selecionado:contato.selecionado}" ng-repeat="contato in contatos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao  track by contato.id">
+      <td><input type="checkbox" ng-model="contato.selecionado" ng-click="verificarContatosSelecionado(contatos)"/></td>
+      <td>{{::contato.serial | ellipsis}}</td>
+      <td><a href="#/detalhesContato/{{contato.id}}">{{contato.nome | name}}</a></td>
+      <td>{{::contato.telefone}}</td>
+      <td>{{::contato.operadora.nome}}</td>
+      <td>{{::contato.operadora.precoComImposto | currency}}</td>
+      <td>{{::contato.data * 1000 | date:'dd/MM/yyyy'}}</td>
+    </tr>
+  </table>
+  <button class="btn btn-primary" ng-click="reset()">Reset</button>
+  <hr/>
+  <a class="btn btn-primary btn-block" href="#/novoContato">Novo Contato</a>
+  <button class="btn btn-danger btn-block" ng-click="apagarContato(contatos)" ng-if="hasContatoSelecionado">Apagar Contato</button>
+</div>
