@@ -1,0 +1,32 @@
+<ion-view id="profile">
+  <ion-content>
+
+    <div class="row" style="text-align:center;padding:20% 0 0;height:30%;">
+      <div class="col col-100">
+        <h1 class="dark">{{profile.name}}</h1>
+        <h4 class="dark">{{profile.email}}</h4>
+      </div>
+    </div>
+
+    <div class="row" style="text-align:center;padding:10% 0;height:70%;">
+      <div class="col col-100">
+        <div class="row">
+          <div class="col col-100">
+            <a ng-href="#/interests" class="button button-outline button-full button-dark">
+              Meus Interesses
+              <i class="icon ion-edit" style="float:right;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row interest-text">
+          <div class="dark" ng-repeat="interest in interests">
+            <i class="icon ion-ios-checkmark-empty"></i>
+            <span>{{interest.name}}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

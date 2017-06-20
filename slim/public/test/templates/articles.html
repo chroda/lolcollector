@@ -1,0 +1,9 @@
+<ion-view>
+  <ion-content padding="false" class="has-header">
+    <div class="row thumb_article">
+      <div class="col col-50" ng-repeat="article in articles" ui-sref="article({id:article.id})">
+        <img ng-src="{{article.featured_image_full_urls.shop_single}}" />
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

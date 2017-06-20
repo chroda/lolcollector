@@ -1,41 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="lolc">
-  <head>
-    <meta charset="utf-8" />
-    <title>LolC</title>
-    <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/app.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/ui.css">
-    <script src="../assets/angular/angular.js"></script>
-    <script src="../assets/angular/i18n/angular-locale_pt-br.js"></script>
-    <script src="../assets/angular/angular-messages.js"></script>
-    <script src="../assets/angular/angular-route.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/lib/ui/ui.js"></script>
-    <script src="../assets/js/config/routeConfig.js"></script>
-    <script src="../assets/js/config/serialGeneratorConfig.js"></script>
-    <script src="../assets/js/config/interceptorsConfig.js"></script>
-    <script src="../assets/js/controllers/contatosCtrl.js"></script>
-    <script src="../assets/js/controllers/novoContatoCtrl.js"></script>
-    <script src="../assets/js/controllers/detalhesContatoCtrl.js"></script>
-    <script src="../assets/js/services/contatosAPIService.js"></script>
-    <script src="../assets/js/services/operadorasAPIService.js"></script>
-    <script src="../assets/js/value/configValue.js"></script>
-    <script src="../assets/js/filters/nameFilter.js"></script>
-    <script src="../assets/js/filters/ellipsisFilter.js"></script>
-    <script src="../assets/js/directives/uiAlertDirective.js"></script>
-    <script src="../assets/js/directives/uiDateDirective.js"></script>
-    <script src="../assets/js/interceptors/timestampInterceptor.js"></script>
-    <script src="../assets/js/interceptors/errorInterceptor.js"></script>
-    <script src="../assets/js/interceptors/loadingInterceptor.js"></script>
-  </head>
-  <body>
-    <div class="jumbotron" ng-show="loading">
-      <h5>Carregando, aguarde</h5>
-    </div>
-    <div ng-hide="loading">
-      <div ng-view></div>
-      <div ng-include="'view/footer.html'"></div>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>LolC</title>
+  <link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="../assets/css/ui.css">
+  <script src="../assets/angular/angular.js"></script>
+  <script src="../assets/js/app.js"></script>
+</head>
+<body>
+  <div ng-view></div>
+</body>
 </html>

@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-content>
+
+    <form name="formInterests">
+      <div class="list">
+        <div class="item item-text-wrap">
+          <h2 class="positive" style="text-align:center"> Escolha os assuntos de seu interesse </h2>
+        </div>
+
+        <ion-checkbox ng-repeat="insterest in interests" ng-model="insterest.checked">
+        {{ insterest.name }}
+        </ion-checkbox>
+
+        <button
+        class="button button-block button-full button-aei"
+        ng-click="saveInterests(userInterests)"
+        >Salvar</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

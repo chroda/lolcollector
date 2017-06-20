@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-content>
+    <form name="formRegister">
+      <div class="list list-inset">
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><i class="icon ion-key placeholder-icon"></i> Nome</span>
+          <input type="text" placeholder="Nome" name="name" ng-model="register.name" ng-required="true"/>
+          <span class="assertive" ng-show="formRegister.name.$invalid && formRegister.name.$dirty">Preencha o campo nome corretamente!</span>
+        </label>
+        <br/>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><i class="icon ion-key placeholder-icon"></i> Email</span>
+          <input type="email" placeholder="Email" name="email" ng-model="register.email" ng-required="true"/>
+          <span class="assertive" ng-show="formRegister.email.$invalid && formRegister.email.$dirty">Preencha o campo email corretamente!</span>
+        </label>
+        <br/>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><i class="icon ion-key placeholder-icon"></i> Senha</span>
+          <input type="password" placeholder="Senha" name="password" ng-model="register.password" ng-required="true"/>
+          <span class="assertive" ng-show="formRegister.password.$invalid && formRegister.password.$dirty">Preencha o campo senha corretamente!</span>
+        </label>
+        <button
+          class="button button-block button-large button-aei"
+          ng-disabled="formRegister.$invalid"
+          ng-click="registerUser(register)"
+        >Enviar</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

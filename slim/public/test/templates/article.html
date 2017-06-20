@@ -1,0 +1,11 @@
+<ion-view id="article">
+  <ion-content class="has-header">
+    <h1>{{article.title.rendered}}</h1>
+    <div class="social-share">
+      <a class="button button-clear icon ion-social-facebook" href="{{ social.fb_share(article.link) }}" target="_blank"></a>
+      <a class="button button-clear icon ion-social-twitter" href="{{ social.tw_share('áeinsights',article.title.rendered,article.link) }}" target="_blank"></a>
+    </div>
+    <!-- {{article.content.rendered}} -->
+    <div class="content-rendered" bind-html-unsafe="article.content.rendered"></div>
+  </ion-content>
+</ion-view>
