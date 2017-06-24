@@ -21,11 +21,12 @@ We are building a very clean and bealty page to announce our product.
 [Check the project right now!](http://lolcollector.chroda.com.br)
 
 ## Legacy Project
+http://lolcollector.chroda.com.br/legacy
 
-We rebuild the old project to our designer @katanako use it.
+We rebuild the old project to our former designer @katanako use it.
 All data its  a fake data, but it works!
 If the real project still under construction and you want make a test of our idea, feel free to use the legacy.
-http://lolcollector.chroda.com.br
+> :warning: **Warning:** all data in legacy project will be lost!
 
 ## Management
 
