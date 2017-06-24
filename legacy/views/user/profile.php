@@ -1,5 +1,7 @@
 <?php
-	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/championKey.png';
+
+	$versions = json_decode(file_get_contents('https://global.api.riotgames.com/api/lol/static-data/BR/v1.2/versions?api_key='.__APP_RIOTAPI_KEY__));
+	$portraitUrl = 'http://ddragon.leagueoflegends.com/cdn/'.$versions[0].'/img/champion/championKey.png';
 	$skinloadingUrl = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/championKey_0.jpg';
 
 	foreach($db->users as $profileId => $profileUser) {

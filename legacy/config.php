@@ -8,32 +8,32 @@
  *
  * Setup you project in 'Production' and 'Development' enviroments.
  */
-define( '__APP_PACKAGE__'		,'DNQ');
-define( '__APP_TITLE__'			,'LoL Collector');
-define( '__APP_VERSION__'		,'0.1');
-define( '__APP_EMAIL__'			,'devnquest@gmail.com');
-define( '__APP_ADSENCE__'		,'ca-pub-9598578551181463');
-define( '__APP_RIOTAPI_KEY__'	,'2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f');
+define( '__APP_PACKAGE__'				,'DNQ');
+define( '__APP_TITLE__'					,'LoL Collector');
+define( '__APP_VERSION__'				,'0.1');
+define( '__APP_EMAIL__'					,'devnquest@gmail.com');
+define( '__APP_ADSENCE__'				,'ca-pub-9598578551181463');
+define( '__APP_RIOTAPI_KEY__'		,'2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f');
 define( '__APP_RIOTAPI_KEY_S__'	,'602c4a60-4d56-44c3-b85e-97837d4685f3');
-define( '__DEBUG__'				,true);
-define( '__DNS__'				,$_SERVER['SERVER_NAME']);
-define( '__IP__'				,$_SERVER['SERVER_ADDR']);
-define( '__HERE__'				,$_SERVER['REQUEST_URI']);
-define( '__VIEW_EXT__'			,'.php');
-define( '__TPL_EXT__'			,__VIEW_EXT__);
-define( '__LOGGING__'			,true);
-define( '__SESSION_NAME__'		,strtoupper(str_replace('\'','', str_replace(' ','',(__APP_PACKAGE__.'-'.__APP_TITLE__)))));
-define( '__SESSION_TIMEOUT__'	,3600);
-define( '__LOCALE__'			,'pt-br');
-define( '__TIMEZONE_LOCAL__'	,'America/Sao_Paulo');
-define( '__TIMEZONE_TIME__'		,'Etc/GMT+3');
-define( '__ROOT__'				,str_replace('\\','/', dirname(__FILE__)).'/');
-define( '__LIB_DIR__'			,__ROOT__		. 'lib/');
-define( '__CONTROLLERS_DIR__'	,__ROOT__		. 'controllers/');
-define( '__VIEW_PATH__'			,__ROOT__		. 'views/');
-define( '__VIEW_CPT_PATH__'		,__VIEW_PATH__	. 'components/');
-define( '__VIEW_USER_PATH__'	,__VIEW_PATH__	. 'user/');
-define( '__VIEW_ADM_PATH__'		,__VIEW_PATH__	. 'admin/');
+define( '__DEBUG__'							,true);
+define( '__DNS__'								,$_SERVER['SERVER_NAME']);
+define( '__IP__'								,$_SERVER['SERVER_ADDR']);
+define( '__HERE__'							,$_SERVER['REQUEST_URI']);
+define( '__VIEW_EXT__'					,'.php');
+define( '__TPL_EXT__'						,__VIEW_EXT__);
+define( '__LOGGING__'						,true);
+define( '__SESSION_NAME__'			,strtoupper(str_replace('\'','', str_replace(' ','',(__APP_PACKAGE__.'-'.__APP_TITLE__)))));
+define( '__SESSION_TIMEOUT__'		,3600);
+define( '__LOCALE__'						,'pt-br');
+define( '__TIMEZONE_LOCAL__'		,'America/Sao_Paulo');
+define( '__TIMEZONE_TIME__'			,'Etc/GMT+3');
+define( '__ROOT__'							,str_replace('\\','/', dirname(__FILE__)).'/');
+define( '__LIB_DIR__'						,__ROOT__		. 'lib/');
+define( '__CONTROLLERS_DIR__'		,__ROOT__		. 'controllers/');
+define( '__VIEW_PATH__'					,__ROOT__		. 'views/');
+define( '__VIEW_CPT_PATH__'			,__VIEW_PATH__	. 'components/');
+define( '__VIEW_USER_PATH__'		,__VIEW_PATH__	. 'user/');
+define( '__VIEW_ADM_PATH__'			,__VIEW_PATH__	. 'admin/');
 
 header( 'Accept-Charset:utf-8,ISO-8859-1;q=0.7,*;q=0.7"',true);
 header( 'Content-Type: text/html; charset=UTF-8');
@@ -67,7 +67,7 @@ case 'lolcollector.chroda.com.br':
 	define('MYSQL_PASS','xQ30CuUG5I');
 	define('MYSQL_NAME','u657450779_lolc');
 	define( '__ENV__', 'prod' );
-	define( '__PATH__', '/' );
+	define( '__PATH__', '/legacy/' );
 	break;
 
 /**
@@ -79,7 +79,7 @@ case 'localhost':default:
 	define('MYSQL_PASS','');
 	define('MYSQL_NAME','lolcollector');
 	define( '__ENV__', 'dev' );
-	define( '__PATH__', '/lolcollector/development/legacy/' );
+	define( '__PATH__', '/lolcollector/legacy/' );
 	break;
 endswitch;
 
