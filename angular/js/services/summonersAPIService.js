@@ -1,10 +1,9 @@
-app.factory("summonersAPI", function($http, config){
+app.factory("summonersAPI", function($http, config, riotapi, riotsecret){
 
   return {
     searchByName : function(summoner){
-      return $http.get( "https://br1.api.riotgames.com/lol/summoner/v3/summoners/by-name/"+summoner, {
-        params:{api_key:config.riotKey}
-      });
+      console.log(riotapi);
+      return $http.get(riotapi.baseurl+'lol/summoner/v3/summoners/by-name/'+summoner, {params:{api_key:riotsecret}});
     }
 
 
