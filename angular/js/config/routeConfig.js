@@ -2,7 +2,15 @@ app.config(function($routeProvider){
 
   $routeProvider.when("/home",{
     templateUrl:"templates/home.html",
-    controller:"homeCtrl"
+    controller:"homeCtrl",
+    // resolve:{
+    //   contatos:function(contatosAPI){
+    //     return contatosAPI.getContatos();
+    //   },
+    //   operadoras:function(operadorasAPI){
+    //     return operadorasAPI.getOperadoras();
+    //   }
+    // }
   });
 
   $routeProvider.when("/contatos",{
