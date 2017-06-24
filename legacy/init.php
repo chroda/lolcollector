@@ -37,7 +37,7 @@ $_SESSION['seo'] = Array(
   'author' => __APP_PACKAGE__,
   'description' => 'Colecione seus personagens no League of Legends',
   'keywords' => '',
-  'copyright' => 'Todos os direitos reservados © Copyright - '.__APP_PACKAGE__.' '.date('Y'),
+  'copyright' => 'Todos os direitos reservados © Copyright '.date('Y'),
   'feed' => 'http://feeds.feedburner.com/',
 );
 

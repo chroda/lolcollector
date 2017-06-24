@@ -43,7 +43,13 @@
 		</div>
 		<footer class="navbar navbar-inverse" role="navigation">
 			<div class="col-lg-11">
-				<p class="navbar-text"><?php echo $_SESSION['seo']['copyright'];?></p>
+				<p class="navbar-text">
+					<a href="https://github.com/chroda/lolcollector" target="_blank">Conheça o Projeto</a>
+					|
+					<?php echo $_SESSION['seo']['copyright'];?>
+					|
+					Desenvolvido por <a href="https://chroda.com.br" target="_blank">chroda</a>
+				</p>
 			</div>
 			<div class="col-lg-1">
 				<a href="<?php echo $_SESSION['social']['facebook']	;?>" target="_blank" class="btn navbar-btn btn-default btn-social"><i class="fa fa-facebook"></i></a>

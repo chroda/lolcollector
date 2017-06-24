@@ -8,10 +8,10 @@
  *
  * Setup you project in 'Production' and 'Development' enviroments.
  */
-define( '__APP_PACKAGE__'				,'DNQ');
+define( '__APP_PACKAGE__'				,'CHRODA');
 define( '__APP_TITLE__'					,'LoL Collector');
 define( '__APP_VERSION__'				,'0.1');
-define( '__APP_EMAIL__'					,'devnquest@gmail.com');
+define( '__APP_EMAIL__'					,'chroda@chroda.com.br');
 define( '__APP_ADSENCE__'				,'ca-pub-9598578551181463');
 define( '__APP_RIOTAPI_KEY__'		,'2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f');
 define( '__APP_RIOTAPI_KEY_S__'	,'602c4a60-4d56-44c3-b85e-97837d4685f3');
