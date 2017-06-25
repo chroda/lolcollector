@@ -13,6 +13,24 @@ app.config(function($routeProvider){
     // }
   });
 
+  $routeProvider.when("/details/:name",{
+    templateUrl:"templates/details.html",
+    controller:"homeCtrl",
+    // resolve:{
+    //   contatos:function(contatosAPI){
+    //     return contatosAPI.getContatos();
+    //   },
+    //   operadoras:function(operadorasAPI){
+    //     return operadorasAPI.getOperadoras();
+    //   }
+    // }
+    resolve:{
+      summoner: function(summonersAPI, $route){
+        return summonersAPI.searchByName($route.current.params.name);
+      }
+    }
+  });
+
   $routeProvider.when("/contatos",{
     templateUrl:"templates/contatos.html",
     controller:"contatosCtrl",
