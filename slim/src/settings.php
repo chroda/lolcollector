@@ -11,9 +11,16 @@ return [
 
         // Monolog settings
         'logger' => [
-            'name' => 'slim-app',
+            'name' => 'lolc',
             'path' => __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
+        ],
+
+        // Riot settings
+        'riot' => (object) [
+            'key'     => '2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f',
+            'server'  => 'br1',
+            'baseurl' => 'api.riotgames.com',
         ],
     ],
 ];

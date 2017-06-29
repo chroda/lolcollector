@@ -17,3 +17,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+// riot
+$container['riot'] = function ($c) {
+    return $c->get('settings')['riot'];
+};
