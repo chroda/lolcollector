@@ -52,7 +52,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ##### See the *[Issue #3 Mapping Riot API](https://github.com/chroda/lolcollector/issues/3)* to more info about it.
 
 - Champion
-- Championmastery
+- Champion-Mastery
 - Current-game
 - Featured-games
 - Game
@@ -80,8 +80,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - Angular2;
 - Ionic;
 - Ionic2;
-- CodeIgniter;
-- Lavarel;
+- Slim;
 - Firebase;
 
 ## Colaborators
