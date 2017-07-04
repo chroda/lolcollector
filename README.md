@@ -71,17 +71,20 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - Android App;
 - iOS App;
 
+## Technologies in testing:
+
+- Slim;
+- Angular;
+
 ## Technologies on the desk:
 
 - React;
 - React-Native;
 - Redux;
-- Angular;
 - Angular2;
 - Ionic;
 - Ionic2;
-- Slim;
-- Firebase; // Probably not.
+- Firebase;
 
 ## Colaborators
 
