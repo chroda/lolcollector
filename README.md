@@ -81,7 +81,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - Ionic;
 - Ionic2;
 - Slim;
-- Firebase;
+- Firebase; // Probably not.
 
 ## Colaborators
 
