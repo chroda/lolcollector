@@ -1,12 +1,10 @@
 <?php
 // Routes
 
-
 $app->get('/', function ($request, $response, $args) {
   pr($this->riot);
 
 });
-
 
 $app->get('/summonersbyname/[{name}]', function ($request, $response, $args) {
   $args = (object) $args;
@@ -18,7 +16,6 @@ $app->get('/summonersbyname/[{name}]', function ($request, $response, $args) {
     'data' => $requisition
   ]);
 });
-
 
 $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $response, $args) {
   $args = (object) $args;
