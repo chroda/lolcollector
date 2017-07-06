@@ -3,7 +3,6 @@
 
 $app->get('/', function ($request, $response, $args) {
   pr($this->riot);
-
 });
 
 $app->get('/summonersbyname/[{name}]', function ($request, $response, $args) {
