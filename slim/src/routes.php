@@ -25,3 +25,28 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
     'data' => $requisition
   ]);
 });
+
+
+// CHAMPION-MASTERY-V3
+  // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}
+  // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}
+  // /lol/champion-mastery/v3/scores/by-summoner/{summonerId}
+// CHAMPION-V3
+  //
+  // 
+// CURRENT-GAME-V1.0
+// FEATURED-GAMES-V1.0
+// GAME-V1.3
+// LEAGUE-V2.5
+// LEAGUE-V3
+// LOL-STATIC-DATA-V1.2
+// MASTERIES-V3
+// MATCH-V2.2 ( KR, LAN )
+// MATCH-V3 ( BR )
+// MATCHLIST-V2.2 ( BR, EUNE, EUW, JP, KR, LAN, LAS, OCE, RU, TR )
+// RUNES-V3
+// SPECTATOR-V3
+// STATIC-DATA-V3
+// STATS-V1.3
+// SUMMONER-V1.4
+// SUMMONER-V3
