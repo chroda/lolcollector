@@ -5,7 +5,7 @@ $app->get('/', function ($request, $response, $args) {
   pr($this->riot);
 });
 
-$app->get('/summonersbyname/[{name}]', function ($request, $response, $args) {
+$app->get('/summonerbyname/[{name}]', function ($request, $response, $args) {
   $args = (object) $args;
   $endpoint = 'https://'.$this->riot->server.'.'.$this->riot->baseurl.'/lol/summoner/v3/summoners/by-name/'.$args->name.'?api_key='.$this->riot->key;
   $this->logger->info('Endpoint: '.$endpoint);
@@ -32,8 +32,9 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
   // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}
   // /lol/champion-mastery/v3/scores/by-summoner/{summonerId}
 // CHAMPION-V3
-  //
-  // 
+  // /lol/platform/v3/champions
+  // /lol/platform/v3/champions/{id}
+// CHAMPION-MASTERY-V3
 // CURRENT-GAME-V1.0
 // FEATURED-GAMES-V1.0
 // GAME-V1.3
@@ -50,3 +51,6 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
 // STATS-V1.3
 // SUMMONER-V1.4
 // SUMMONER-V3
+
+// TOURNAMENTS-V3
+  // /lol/tournament/v3/codes
