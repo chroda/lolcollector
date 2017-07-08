@@ -27,13 +27,15 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
 });
 
 
+// Just stable versions
+
 // CHAMPION-MASTERY-V3
   // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}
   // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}
   // /lol/champion-mastery/v3/scores/by-summoner/{summonerId}
 // CHAMPION-V3
   //
-  // 
+  //
 // CURRENT-GAME-V1.0
 // FEATURED-GAMES-V1.0
 // GAME-V1.3
