@@ -18,7 +18,7 @@ return [
 
         // Riot settings
         'riot' => (object) [
-            'key'     => '2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f',
+            'key'     => 'RGAPI-00dedc15-6d70-41ba-893b-8a42407a2397',
             'server'  => 'br1',
             'baseurl' => 'api.riotgames.com',
         ],

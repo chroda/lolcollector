@@ -27,6 +27,8 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
 });
 
 
+// Just stable versions
+
 // CHAMPION-MASTERY-V3
   // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}
   // /lol/champion-mastery/v3/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}
