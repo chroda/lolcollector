@@ -5,7 +5,7 @@ $app->get('/', function ($request, $response, $args) {
   pr($this->riot);
 });
 
-$app->get('/summonerbyname/[{name}]', function ($request, $response, $args) {
+$app->get('/summoner-by-name/[{name}]', function ($request, $response, $args) {
   $args = (object) $args;
   $endpoint = 'https://'.$this->riot->server.'.'.$this->riot->baseurl.'/lol/summoner/v3/summoners/by-name/'.$args->name.'?api_key='.$this->riot->key;
   $this->logger->info('Endpoint: '.$endpoint);
