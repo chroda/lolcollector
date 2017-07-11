@@ -43,7 +43,6 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
   // /lol/league/v3/leagues/by-summoner/{summonerId}
   // /lol/league/v3/masterleagues/by-queue/{queue}
   // /lol/league/v3/positions/by-summoner/{summonerId}
-// MASTERIES-V3
 // LOL-STATIC-DATA-V3
   // /lol/static-data/v3/champions
   // /lol/static-data/v3/champions/{id}
@@ -61,6 +60,7 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
   // /lol/static-data/v3/summoner-spells
   // /lol/static-data/v3/summoner-spells/{id}
   // /lol/static-data/v3/versions
+// MASTERIES-V3
 // MATCH-V2.2 ( KR, LAN )
 // MATCH-V3 ( BR )
 // MATCHLIST-V2.2 ( BR, EUNE, EUW, JP, KR, LAN, LAS, OCE, RU, TR )
