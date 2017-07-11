@@ -15,7 +15,7 @@ if(isset($_GET['action'])){
           // 2 - já cadastrado
           // 3 - não existe
           $signal=0;
-          $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f';
+          $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key='.__APP_RIOTAPI_KEY__;
           $summonerName = str_replace('__name__',strip_tags($_POST['name']),$summonerNameUrl);
           $summoner = json_decode(@file_get_contents($summonerName));
           if(empty($summoner)){
@@ -51,7 +51,7 @@ if(isset($_GET['action'])){
           $email = $_POST['email'];
           $emailConfirm	= $_POST['emailConfirm'];
           $sex = $_POST['sex'];
-          $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key=2a0a5c1e-7355-42dc-8e2b-f25d5ee9771f';
+          $summonerNameUrl = 'https://br.api.pvp.net/api/lol/br/v1.4/summoner/by-name/__name__?api_key='.__APP_RIOTAPI_KEY__;
           $summonerName = str_replace('__name__',strip_tags($_POST['name']),$summonerNameUrl);
           $summoner = json_decode(@file_get_contents($summonerName));
           if(!empty($summoner)){
