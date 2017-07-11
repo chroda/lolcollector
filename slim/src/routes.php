@@ -38,14 +38,29 @@ $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $r
 // CHAMPION-V3
   // /lol/platform/v3/champions
   // /lol/platform/v3/champions/{id}
-// CHAMPION-MASTERY-V3
-// CURRENT-GAME-V1.0
-// FEATURED-GAMES-V1.0
-// GAME-V1.3
-// LEAGUE-V2.5
 // LEAGUE-V3
-// LOL-STATIC-DATA-V1.2
+  // /lol/league/v3/challengerleagues/by-queue/{queue}
+  // /lol/league/v3/leagues/by-summoner/{summonerId}
+  // /lol/league/v3/masterleagues/by-queue/{queue}
+  // /lol/league/v3/positions/by-summoner/{summonerId}
 // MASTERIES-V3
+// LOL-STATIC-DATA-V3
+  // /lol/static-data/v3/champions
+  // /lol/static-data/v3/champions/{id}
+  // /lol/static-data/v3/items
+  // /lol/static-data/v3/items/{id}
+  // /lol/static-data/v3/language-strings
+  // /lol/static-data/v3/languages
+  // /lol/static-data/v3/maps
+  // /lol/static-data/v3/masteries
+  // /lol/static-data/v3/masteries/{id}
+  // /lol/static-data/v3/profile-icons
+  // /lol/static-data/v3/realms
+  // /lol/static-data/v3/runes
+  // /lol/static-data/v3/runes/{id}
+  // /lol/static-data/v3/summoner-spells
+  // /lol/static-data/v3/summoner-spells/{id}
+  // /lol/static-data/v3/versions
 // MATCH-V2.2 ( KR, LAN )
 // MATCH-V3 ( BR )
 // MATCHLIST-V2.2 ( BR, EUNE, EUW, JP, KR, LAN, LAS, OCE, RU, TR )
