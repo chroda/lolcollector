@@ -51,6 +51,8 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 
 ##### See the *[Issue #3 Mapping Riot API](https://github.com/chroda/lolcollector/issues/3)* to more info about it.
 
+> **DEPRECATED:** Too many endpoint deprecated.
+
 - Champion
 - Champion-Mastery
 - Current-game
