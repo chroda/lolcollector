@@ -8,13 +8,12 @@
  *
  * Setup you project in 'Production' and 'Development' enviroments.
  */
-define( '__ROOT__'							,str_replace('\\','/', dirname(__FILE__)).'/');
 define( '__APP_PACKAGE__'				,'CHRODA');
 define( '__APP_TITLE__'					,'LoL Collector');
 define( '__APP_VERSION__'				,'0.1');
 define( '__APP_EMAIL__'					,'chroda@chroda.com.br');
 define( '__APP_ADSENCE__'				,'ca-pub-9598578551181463');
-define( '__APP_RIOTAPI_KEY__'		,trim(file_get_contents(__ROOT__.'../apikey.txt')));
+define( '__APP_RIOTAPI_KEY__'		,trim(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/apikey.txt')));
 define( '__APP_RIOTAPI_KEY_S__'	,'602c4a60-4d56-44c3-b85e-97837d4685f3');
 define( '__DEBUG__'							,true);
 define( '__DNS__'								,$_SERVER['SERVER_NAME']);
@@ -28,6 +27,7 @@ define( '__SESSION_TIMEOUT__'		,3600);
 define( '__LOCALE__'						,'pt-br');
 define( '__TIMEZONE_LOCAL__'		,'America/Sao_Paulo');
 define( '__TIMEZONE_TIME__'			,'Etc/GMT+3');
+define( '__ROOT__'							,str_replace('\\','/', dirname(__FILE__)).'/');
 define( '__LIB_DIR__'						,__ROOT__		. 'lib/');
 define( '__CONTROLLERS_DIR__'		,__ROOT__		. 'controllers/');
 define( '__VIEW_PATH__'					,__ROOT__		. 'views/');
@@ -63,8 +63,8 @@ case 		 'lolcollector.com.br':
 case 'www.lolcollector.com.br':
 case 'lolcollector.chroda.com.br':
 	define('MYSQL_HOST','mysql.hostinger.com.br');
-	define('MYSQL_USER','u657450779_lolc');
-	define('MYSQL_PASS','xQ30CuUG5I');
+	define('MYSQL_USER','u608690273');
+	define('MYSQL_PASS','3w4369czm7Ef');
 	define('MYSQL_NAME','u657450779_lolc');
 	define( '__ENV__', 'prod' );
 	define( '__PATH__', '/legacy/' );
@@ -106,3 +106,4 @@ foreach ($championsRiot->data as $id => $dbChampions){
 ksort($db->champions);
 
 session_start();
+pr(__APP_RIOTAPI_KEY__);die;
