@@ -8,16 +8,17 @@
  *
  * Setup you project in 'Production' and 'Development' enviroments.
  */
+define( '__ROOT__'							,str_replace('\\','/', dirname(__FILE__)).'/');
 define( '__APP_PACKAGE__'				,'CHRODA');
 define( '__APP_TITLE__'					,'LoL Collector');
 define( '__APP_VERSION__'				,'0.1');
 define( '__APP_EMAIL__'					,'chroda@chroda.com.br');
 define( '__APP_ADSENCE__'				,'ca-pub-9598578551181463');
-define( '__APP_RIOTAPI_KEY__'		,'RGAPI-c21679bd-3596-4cd7-8212-1be4aeeec04c');
+define( '__APP_RIOTAPI_KEY__'		,trim(file_get_contents(__ROOT__.'../apikey.txt')));
 define( '__APP_RIOTAPI_KEY_S__'	,'602c4a60-4d56-44c3-b85e-97837d4685f3');
 define( '__DEBUG__'							,true);
 define( '__DNS__'								,$_SERVER['SERVER_NAME']);
-define( '__IP__'								,$_SERVER['SERVER_ADDR']);
+define( '__IP__'								,@$_SERVER['SERVER_ADDR']);
 define( '__HERE__'							,$_SERVER['REQUEST_URI']);
 define( '__VIEW_EXT__'					,'.php');
 define( '__TPL_EXT__'						,__VIEW_EXT__);
@@ -27,7 +28,6 @@ define( '__SESSION_TIMEOUT__'		,3600);
 define( '__LOCALE__'						,'pt-br');
 define( '__TIMEZONE_LOCAL__'		,'America/Sao_Paulo');
 define( '__TIMEZONE_TIME__'			,'Etc/GMT+3');
-define( '__ROOT__'							,str_replace('\\','/', dirname(__FILE__)).'/');
 define( '__LIB_DIR__'						,__ROOT__		. 'lib/');
 define( '__CONTROLLERS_DIR__'		,__ROOT__		. 'controllers/');
 define( '__VIEW_PATH__'					,__ROOT__		. 'views/');
@@ -79,7 +79,7 @@ case 'localhost':default:
 	define('MYSQL_PASS','');
 	define('MYSQL_NAME','lolcollector');
 	define( '__ENV__', 'dev' );
-	define( '__PATH__', '/lolcollector/legacy/' );
+	define( '__PATH__', '/' );
 	break;
 endswitch;
 
@@ -89,7 +89,7 @@ define('PKG_DIR','http://'.__IP__.'/pkg/');
 
 // $usersJson = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
 $usersJson = json_decode(file_get_contents('db.json'));
-$championsRiot = json_decode(file_get_contents('https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?champData=skins&api_key='.__APP_RIOTAPI_KEY__));
+$championsRiot = json_decode(file_get_contents('https://br1.api.riotgames.com/lol/static-data/v3/champions?locale=pt_BR&tags=skins&dataById=false&api_key='.__APP_RIOTAPI_KEY__));
 
 $db = new StdClass;
 $db->users = [];
