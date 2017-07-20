@@ -89,7 +89,13 @@ define('PKG_DIR','http://'.__IP__.'/pkg/');
 
 // $usersJson = json_decode(file_get_contents('https://raw.githubusercontent.com/chroda/lolcollector/master/development/legacy/db.json'));
 $usersJson = json_decode(file_get_contents('db.json'));
-$championsRiot = json_decode(file_get_contents('https://br1.api.riotgames.com/lol/static-data/v3/champions?locale=pt_BR&tags=skins&dataById=false&api_key='.__APP_RIOTAPI_KEY__));
+@$championsRiot = json_decode(file_get_contents('https://br1.api.riotgames.com/lol/static-data/v3/champions?locale=pt_BR&tags=skins&dataById=false&api_key='.__APP_RIOTAPI_KEY__));
+
+if(empty($championsRiot)){
+	require_once('views/components/maintenance.php');
+	die;
+};
+
 
 $db = new StdClass;
 $db->users = [];
@@ -106,4 +112,3 @@ foreach ($championsRiot->data as $id => $dbChampions){
 ksort($db->champions);
 
 session_start();
-pr(__APP_RIOTAPI_KEY__);die;
