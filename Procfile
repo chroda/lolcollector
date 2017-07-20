@@ -1,1 +1,1 @@
-web:php -S localhost:$PORT -t /public/
+web:php -S localhost:$PORT -t public
