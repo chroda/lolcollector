@@ -15,6 +15,9 @@ But we want to develop a great application to best use of ours summoners.
 
 - Buiding Comming-Soon Page.
 
+- API URL: https://lolcollector.herokuapp.com/
+- Frontend URL: http://lolcollector.chroda.com.br/
+
 ## Comming-Soon Page
 
 We are building a very clean and bealty page to announce our product.
