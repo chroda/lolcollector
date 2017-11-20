@@ -91,6 +91,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ## Colaborators
 
 - [chroda](https://github.com/chroda);
+- [mihtoa](https://github.com/mihtoa);
 - [AngieAbadeer](https://github.com/angieabadeer); - Former
 - [Urtred](https://github.com/urtred); - Former
 - [Tavaresrafa](https://github.com/tavaresrafa); - Former
