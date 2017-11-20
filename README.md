@@ -23,6 +23,8 @@ We are building a very clean and bealty page to announce our product.
 ## Legacy Project
 http://lolcollector.chroda.com.br/legacy
 
+> ! DEACTIVATED
+
 We rebuild the old project to our former designer @katanako use it.
 All data its  a fake data, but it works!
 If the real project still under construction and you want make a test of our idea, feel free to use the legacy.
@@ -47,6 +49,8 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 - Collected Skins Champions;
 - Collected Skins Wards;
 
+- Everything what player can collect;
+
 ## Riot API Tracks
 
 ##### See the *[Issue #3 Mapping Riot API](https://github.com/chroda/lolcollector/issues/3)* to more info about it.
@@ -70,6 +74,7 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 ## Plataform Goals
 
 - Web Site;
+- API;
 - Android App;
 - iOS App;
 
@@ -77,9 +82,11 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 
 - Slim;
 - Angular;
+- VueJS;
 
 ## Technologies on the desk:
 
+- VueJS;
 - React;
 - React-Native;
 - Redux;
