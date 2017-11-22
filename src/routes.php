@@ -3,7 +3,7 @@
 
 $app->get('/', function ($request, $response, $args) {
   echo 'LoLCollector API - lolcollector.chroda.com.br';
-  echo 'see more in github.com/chroda';
+  echo ' - see more in github.com/chroda';
 });
 
 $app->get('/summoner-by-name/[{name}]', function ($request, $response, $args) {
