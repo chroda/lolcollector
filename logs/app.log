@@ -1,0 +1,4 @@
+[2018-02-04 15:07:41] lolc.INFO: Endpoint: https://br1.api.riotgames.com/lol/summoner/v3/summoners/by-name/chroda?api_key=RGAPI-c21679bd-3596-4cd7-8212-1be4aeeec04c [] {"uid":"1df0a7e"}
+[2018-02-04 15:09:10] lolc.INFO: Endpoint: https://br1.api.riotgames.com/lol/summoner/v3/summoners/by-name/chroda?api_key=RGAPI-fd040cb5-319d-4462-8f3f-eda3105db8ad [] {"uid":"f775860"}
+[2018-02-04 15:09:21] lolc.INFO: Endpoint: https://br1.api.riotgames.com/lol/summoner/v3/summoners/by-name/chroda?api_key=RGAPI-fd040cb5-319d-4462-8f3f-eda3105db8ad [] {"uid":"d06c219"}
+[2018-02-04 15:10:38] lolc.INFO: Endpoint: https://br1.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/1765464?api_key=RGAPI-fd040cb5-319d-4462-8f3f-eda3105db8ad [] {"uid":"a914c74"}

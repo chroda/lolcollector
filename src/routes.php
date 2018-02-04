@@ -1,10 +1,10 @@
 <?php
 // Routes
 
-$app->get('/', function ($request, $response, $args) {
-  echo 'LoLCollector API - lolcollector.chroda.com.br';
-  echo ' - see more in github.com/chroda';
-});
+// $app->get('/', function ($request, $response, $args) {
+//   echo 'LoLCollector API - lolcollector.chroda.com.br';
+//   echo ' - see more in github.com/chroda';
+// });
 
 $app->get('/summoner-by-name/[{name}]', function ($request, $response, $args) {
   $r = $this->riot;
@@ -21,6 +21,17 @@ $app->get('/summoner-by-name/[{name}]', function ($request, $response, $args) {
 $app->get('/champion-mastery-by-summoner/[{summonerId}]', function ($request, $response, $args) {
   $args = (object) $args;
   $endpoint = 'https://'.$this->riot->server.'.'.$this->riot->baseurl.'/lol/champion-mastery/v3/scores/by-summoner/'.$args->summonerId.'?api_key='.$this->riot->key;
+  $this->logger->info('Endpoint: '.$endpoint);
+  $requisition = json_decode(file_get_contents($endpoint));
+  return $response->withJson([
+    'code' => 200,
+    'data' => $requisition
+  ]);
+});
+
+$app->get('/', function ($request, $response, $args) {
+  $args = (object) $args;
+  $endpoint = 'https://br1.api.riotgames.com/lol/champion-mastery/v3/champion-masteries/by-summoner/1765464?api_key=RGAPI-fd040cb5-319d-4462-8f3f-eda3105db8ad';
   $this->logger->info('Endpoint: '.$endpoint);
   $requisition = json_decode(file_get_contents($endpoint));
   return $response->withJson([
