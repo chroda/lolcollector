@@ -1,3 +1,13 @@
+<style media="screen">
+body{
+  margin: 0;
+}
+img{
+  width: 50px;
+  float: left;
+}
+</style>
+
 <?php
 
 // {
@@ -13,6 +23,7 @@ const url = 'https://br1.api.riotgames.com/lol/';
 const key = '&api_key=RGAPI-8c61f2fd-4eda-4d32-ac23-f2bb1df0952d';
 const version = '8.2.1';
 
+date_default_timezone_set('America/Sao_Paulo');
 
 function getFromApi($middle){
   return json_decode(file_get_contents(url.$middle.key));
@@ -27,14 +38,10 @@ function pr($val){
 $masteries = getFromApi('champion-mastery/v3/champion-masteries/by-summoner/1765464?');
 $champions = getFromApi('static-data/v3/champions?locale=en_US&dataById=false')->data;
 
-
 foreach ($masteries as $masterie) {
-  // pr($masterie);die;
   foreach ($champions as $key => $champion) {
     if($champion->id == $masterie->championId){
-      pr($masterie);
-      pr($champion);
-      echo '<img src="http://ddragon.leagueoflegends.com/cdn/'.version.'/img/champion/'.$key.'.png"/>';
+      echo "<img src='http://ddragon.leagueoflegends.com/cdn/{version}/img/champion/{$key}.png'/>";
     }
   }
 }
