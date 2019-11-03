@@ -5,9 +5,9 @@ A League of Legends -MOBA game- collection website.
 
 ## UPDATE :warning:
 
-Hello friends, really long time without writing here, now the League game already have a library collection inside the game, and this project lost his purpose, maybe I'll still build something to consume the dev-API from RIOTGames and to test skills and technologies.
+Hello friends, really long time without writing here, now the **League game already have a library collection inside the game**, and this project lost his purpose, maybe I'll still build something to consume the dev-API from RIOTGames and to test skills and technologies.
 
-With that said, I want to you understand that this project has no intention to ever be completed.
+With that said, I want to you understand that this project has no intention to ever be completed.   
 Sorry if you used in the past and wait for something to born here, was fun to learn with this project.
 
 ### Disclaimer
