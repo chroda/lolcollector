@@ -2,7 +2,6 @@
 
 A League of Legends -MOBA game- collection website.
 
-This project idea was born in 2014, and the first commit here on GitHub was dated on december, 2015.
 
 ## UPDATE :warning:
 
@@ -18,7 +17,7 @@ Our goal however, has stayed the same, to develop a great application of best us
 
 ## Since
 
-- This application was idealized in 2014, created and maintained in GitHub.
+- This application was idealized in 2014, and the first commit here on GitHub was dated on december, 2015.
 
 ## Current Stage
 
