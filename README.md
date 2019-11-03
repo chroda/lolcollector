@@ -2,6 +2,14 @@
 
 A League of Legends -MOBA game- collection website.
 
+This project idea was born in 2014, and the first commit here on GitHub was dated on december, 2015.
+
+## UPDATE
+
+Hello friends, really long time without writing here, now the League game already have a library collection inside the game, and this project lost his purpose, maybe I'll still build something to consume the dev-API from RIOTGames and to test skills and technologies.
+With that said, I want to you understand that this project has no intention to ever be completed.
+Sorry if you used in the past and wait for something to born here, was fun to learn with this project.
+
 ### Disclaimer
 
 LolCollector was built when the envolved devs had time. Along the years, development has been halted and restarted.
@@ -27,24 +35,6 @@ We are building a clean, simple, and attractive page for future product announce
 http://lolcollector.chroda.com.br/legacy
 
 > ! DEACTIVATED
-
-We rebuilt the old project for use by former designer @katanako.
-All data is fake data, however, it works!
-If the real project is still under development and you want make a test of our idea, feel free to use the legacy project.
-> :warning: **Warning:** all data in legacy project will be lost!
-
-## Management
-
-We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project management.
-
-
-[badge_todo]:https://badge.waffle.io/chroda/lolcollector.svg?label=todo&title=To-Do "Issues To Do"
-[badge_doing]:https://badge.waffle.io/chroda/lolcollector.svg?label=doing&title=Doing "Issues Doing"
-
-![[alt text](http://waffle.io/chroda/lolcollector)][badge_todo]
-![[alt text](http://waffle.io/chroda/lolcollector)][badge_doing]
-
-[![Throughput Graph](https://graphs.waffle.io/chroda/lolcollector/throughput.svg)](https://waffle.io/chroda/lolcollector/metrics/throughput)
 
 ## Production Goals
 
@@ -78,30 +68,11 @@ We are using [Waffle.io](https://waffle.io/chroda/lolcollector) for the project 
 
 - Web Site;
 - API;
-- Android Application;
-- iOS Application;
-
-## Technologies in testing:
-
-- Slim;
-- Angular;
-- VueJS;
-
-## Technologies on the desk:
-
-- VueJS;
-- React;
-- React-Native;
-- Redux;
-- Angular2;
-- Ionic;
-- Ionic2;
-- Firebase;
 
 ## Collaborators
 
 - [chroda](https://github.com/chroda);
-- [mihtoa](https://github.com/mihtoa);
+- [mihtoa](https://github.com/mihtoa); - Former
 - [AngieAbadeer](https://github.com/angieabadeer); - Former
 - [Urtred](https://github.com/urtred); - Former
 - [Tavaresrafa](https://github.com/tavaresrafa); - Former
