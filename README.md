@@ -21,7 +21,9 @@ Our goal however, has stayed the same, to develop a great application of best us
 
 ## Current Stage
 
-- Coming Soon page in development.
+- ### The current stage is in **hiatus**.
+
+- ~Coming Soon page in development.~
 
 - API URL: https://lolcollector.herokuapp.com/
 - Frontend URL: http://lolcollector.chroda.com.br/
